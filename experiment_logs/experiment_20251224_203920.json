@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "experiment_id": "20251224_203920",
+    "start_time": "2025-12-24T20:39:20.596380",
+    "dataset_info": {
+      "name": "iris",
+      "samples": 150,
+      "features": 4,
+      "classes": 3
+    },
+    "best_config": {
+      "iteration": 1,
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 500,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.001,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "The MLP model is suitable for the iris dataset with 150 samples and 3 classes. A learning rate of 0.001 is a good starting point, and a batch size of 32 helps in more stable updates. The hidden layer sizes [100, 50] provide a good balance between complexity and overfitting. Using 'adam' optimizer and early stopping will help in efficient training."
+      },
+      "score": 0.9666666666666667
+    },
+    "best_score": 0.9666666666666667,
+    "end_time": "2025-12-24T20:39:40.442398",
+    "total_configurations": 2
+  },
+  "configurations": [
+    {
+      "iteration": 1,
+      "timestamp": "2025-12-24T20:39:28.502417",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 500,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.001,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "The MLP model is suitable for the iris dataset with 150 samples and 3 classes. A learning rate of 0.001 is a good starting point, and a batch size of 32 helps in more stable updates. The hidden layer sizes [100, 50] provide a good balance between complexity and overfitting. Using 'adam' optimizer and early stopping will help in efficient training."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.19728493690490723,
+      "reasoning": "The MLP model is suitable for the iris dataset with 150 samples and 3 classes. A learning rate of 0.001 is a good starting point, and a batch size of 32 helps in more stable updates. The hidden layer sizes [100, 50] provide a good balance between complexity and overfitting. Using 'adam' optimizer and early stopping will help in efficient training."
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2025-12-24T20:39:34.646934",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.001,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration explores a new learning rate of 0.01 and a larger batch size of 64 for better gradient estimates. The 'sgd' optimizer with a momentum of 0.9 aims to improve convergence speed. The hidden layer sizes remain the same to balance complexity and performance, while the activation function is changed to 'tanh' to explore different nonlinearities. Early stopping is still enabled to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.13097476959228516,
+      "reasoning": "This configuration explores a new learning rate of 0.01 and a larger batch size of 64 for better gradient estimates. The 'sgd' optimizer with a momentum of 0.9 aims to improve convergence speed. The hidden layer sizes remain the same to balance complexity and performance, while the activation function is changed to 'tanh' to explore different nonlinearities. Early stopping is still enabled to prevent overfitting."
+    }
+  ]
+}

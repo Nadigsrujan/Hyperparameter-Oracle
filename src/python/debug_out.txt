@@ -1,0 +1,12 @@
+STDOUT:
+Loading Iris dataset...
+
+Testing MLP evaluation...
+MLP Result - Accuracy: 1.0, Duration: 0.27726221084594727
+
+Testing RF evaluation...
+RF Result - Accuracy: 1.0, Duration: 0.1289353370666504
+
+STDERR:
+C:\Users\nadig\Downloads\dsael-main\venv\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  warnings.warn(

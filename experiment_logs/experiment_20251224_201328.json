@@ -1,0 +1,189 @@
+{
+  "metadata": {
+    "experiment_id": "20251224_201328",
+    "start_time": "2025-12-24T20:13:28.437833",
+    "dataset_info": {
+      "name": "iris",
+      "samples": 150,
+      "features": 4,
+      "classes": 3
+    },
+    "best_config": {
+      "iteration": 1,
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 300,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "Given the small size of the iris dataset with 150 samples and 4 features, an MLP with two hidden layers (100, 50) allows for capturing non-linear relationships. The chosen learning rate and batch size contribute to stable convergence, while early stopping helps to prevent overfitting."
+      },
+      "score": 0.9666666666666667
+    },
+    "best_score": 0.9666666666666667,
+    "end_time": "2025-12-24T20:13:59.286326",
+    "total_configurations": 5
+  },
+  "configurations": [
+    {
+      "iteration": 1,
+      "timestamp": "2025-12-24T20:13:34.497331",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 300,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "Given the small size of the iris dataset with 150 samples and 4 features, an MLP with two hidden layers (100, 50) allows for capturing non-linear relationships. The chosen learning rate and batch size contribute to stable convergence, while early stopping helps to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.8188023567199707,
+      "reasoning": "Given the small size of the iris dataset with 150 samples and 4 features, an MLP with two hidden layers (100, 50) allows for capturing non-linear relationships. The chosen learning rate and batch size contribute to stable convergence, while early stopping helps to prevent overfitting."
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2025-12-24T20:13:40.512046",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 500,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration explores a different optimizer (sgd) with momentum for improved convergence, while the increased complexity of the hidden layer sizes enhances the model's capacity to capture intricate patterns. The learning rate is slightly raised for faster convergence, and early stopping is maintained to mitigate overfitting risks."
+      },
+      "score": 0.6333333333333333,
+      "duration": 0.3538808822631836,
+      "reasoning": "This configuration explores a different optimizer (sgd) with momentum for improved convergence, while the increased complexity of the hidden layer sizes enhances the model's capacity to capture intricate patterns. The learning rate is slightly raised for faster convergence, and early stopping is maintained to mitigate overfitting risks."
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2025-12-24T20:13:45.054229",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 400,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains a stable learning rate and batch size for improved convergence while slightly increasing the maximum iterations to allow the model more training time. The architecture stays the same to capture non-linear relationships effectively, with early stopping to prevent overfitting."
+      },
+      "score": 0.8333333333333334,
+      "duration": 0.45218920707702637,
+      "reasoning": "This configuration maintains a stable learning rate and batch size for improved convergence while slightly increasing the maximum iterations to allow the model more training time. The architecture stays the same to capture non-linear relationships effectively, with early stopping to prevent overfitting."
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2025-12-24T20:13:49.570250",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.002,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 350,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to slightly increase the learning rate for faster convergence while keeping the batch size constant for stability. The maximum iterations are adjusted to allow for more training time, and the alpha is reduced to apply less regularization, which could enhance learning given the previous high accuracy. The model architecture remains the same to capture non-linear relationships effectively."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.23437929153442383,
+      "reasoning": "This configuration aims to slightly increase the learning rate for faster convergence while keeping the batch size constant for stability. The maximum iterations are adjusted to allow for more training time, and the alpha is reduced to apply less regularization, which could enhance learning given the previous high accuracy. The model architecture remains the same to capture non-linear relationships effectively."
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2025-12-24T20:13:54.786651",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0025,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 400,
+        "hidden_layer_sizes": [
+          100,
+          75
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration increases the number of neurons in the second hidden layer to 75 to enhance learning capacity while maintaining the architecture's general structure. The learning rate is slightly adjusted for faster convergence, and the batch size remains the same for stability. Early stopping is retained to mitigate overfitting risks."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.06012129783630371,
+      "reasoning": "This configuration increases the number of neurons in the second hidden layer to 75 to enhance learning capacity while maintaining the architecture's general structure. The learning rate is slightly adjusted for faster convergence, and the batch size remains the same for stability. Early stopping is retained to mitigate overfitting risks."
+    }
+  ]
+}

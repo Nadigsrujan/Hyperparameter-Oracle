@@ -1,0 +1,1543 @@
+{
+  "metadata": {
+    "experiment_id": "20251225_002725",
+    "start_time": "2025-12-25T00:27:25.409181",
+    "dataset_info": {
+      "name": "iris",
+      "samples": 150,
+      "features": 4,
+      "classes": 3
+    },
+    "best_config": {
+      "iteration": 3,
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 700,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to balance exploration and stability by slightly increasing the learning rate and changing the batch size. The architecture remains complex with three hidden layers, while early stopping is maintained to curb overfitting. A moderate number of iterations is chosen to allow sufficient training."
+      },
+      "score": 1.0
+    },
+    "best_score": 1.0,
+    "end_time": "2025-12-25T00:32:18.716810",
+    "total_configurations": 50
+  },
+  "configurations": [
+    {
+      "iteration": 1,
+      "timestamp": "2025-12-25T00:27:34.524992",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 500,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "The Iris dataset is small and has a simple structure, making an MLP with two hidden layers suitable. The chosen learning rate and batch size balance training efficiency with stability, while early stopping helps prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.22097492218017578,
+      "reasoning": "The Iris dataset is small and has a simple structure, making an MLP with two hidden layers suitable. The chosen learning rate and batch size balance training efficiency with stability, while early stopping helps prevent overfitting."
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2025-12-25T00:27:40.816934",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration explores a different optimizer (sgd) with momentum to potentially improve convergence. The hidden layer architecture is expanded to three layers to capture more complex patterns, and the learning rate is slightly increased for better training dynamics. Minmax scaling is employed to enhance feature normalization."
+      },
+      "score": 0.9333333333333333,
+      "duration": 0.12691020965576172,
+      "reasoning": "This configuration explores a different optimizer (sgd) with momentum to potentially improve convergence. The hidden layer architecture is expanded to three layers to capture more complex patterns, and the learning rate is slightly increased for better training dynamics. Minmax scaling is employed to enhance feature normalization."
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2025-12-25T00:27:45.999543",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 700,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to balance exploration and stability by slightly increasing the learning rate and changing the batch size. The architecture remains complex with three hidden layers, while early stopping is maintained to curb overfitting. A moderate number of iterations is chosen to allow sufficient training."
+      },
+      "score": 1.0,
+      "duration": 0.28934335708618164,
+      "reasoning": "This configuration aims to balance exploration and stability by slightly increasing the learning rate and changing the batch size. The architecture remains complex with three hidden layers, while early stopping is maintained to curb overfitting. A moderate number of iterations is chosen to allow sufficient training."
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2025-12-25T00:27:51.772670",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.007,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 750,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration incrementally increases the learning rate to explore potential improvements in convergence speed while maintaining the successful architecture of three hidden layers. The batch size remains the same to ensure stability, and the maximum iterations are slightly raised to allow for deeper training without risking overfitting due to early stopping."
+      },
+      "score": 0.9,
+      "duration": 0.20008063316345215,
+      "reasoning": "This configuration incrementally increases the learning rate to explore potential improvements in convergence speed while maintaining the successful architecture of three hidden layers. The batch size remains the same to ensure stability, and the maximum iterations are slightly raised to allow for deeper training without risking overfitting due to early stopping."
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2025-12-25T00:27:56.788727",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.006,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate for potentially better convergence and extends the maximum iterations to allow for deeper training. The architecture remains consistent with the successful setup of three hidden layers, maintaining stability with early stopping to prevent overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.15441203117370605,
+      "reasoning": "This configuration slightly increases the learning rate for potentially better convergence and extends the maximum iterations to allow for deeper training. The architecture remains consistent with the successful setup of three hidden layers, maintaining stability with early stopping to prevent overfitting."
+    },
+    {
+      "iteration": 6,
+      "timestamp": "2025-12-25T00:28:02.857875",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0065,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 850,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration builds on the previous successful setup by slightly increasing the learning rate to explore further improvements in convergence speed. The number of maximum iterations is increased to allow for additional training without risking overfitting due to early stopping, while maintaining the previously effective architecture and hyperparameters."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.16428375244140625,
+      "reasoning": "This configuration builds on the previous successful setup by slightly increasing the learning rate to explore further improvements in convergence speed. The number of maximum iterations is increased to allow for additional training without risking overfitting due to early stopping, while maintaining the previously effective architecture and hyperparameters."
+    },
+    {
+      "iteration": 7,
+      "timestamp": "2025-12-25T00:28:07.704789",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0075,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 750,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate to further explore convergence improvements while maintaining a stable batch size. The architecture remains consistent with previous successful setups, and the maximum iterations are balanced to allow sufficient training without risking overfitting due to early stopping."
+      },
+      "score": 0.9333333333333333,
+      "duration": 0.3097710609436035,
+      "reasoning": "This configuration slightly increases the learning rate to further explore convergence improvements while maintaining a stable batch size. The architecture remains consistent with previous successful setups, and the maximum iterations are balanced to allow sufficient training without risking overfitting due to early stopping."
+    },
+    {
+      "iteration": 8,
+      "timestamp": "2025-12-25T00:28:13.698494",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0065,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 750,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.006,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the L2 penalty alpha to explore potential improvements while maintaining the previous successful architecture and hyperparameters. The learning rate is also kept stable to ensure consistency in performance, while early stopping is retained to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.24437403678894043,
+      "reasoning": "This configuration slightly increases the L2 penalty alpha to explore potential improvements while maintaining the previous successful architecture and hyperparameters. The learning rate is also kept stable to ensure consistency in performance, while early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 9,
+      "timestamp": "2025-12-25T00:28:19.088121",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.008,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to explore a slightly higher learning rate to potentially improve convergence while keeping the batch size stable. The architecture remains unchanged with three hidden layers to maintain performance. The maximum iterations are extended to allow for deeper training, and early stopping is retained to mitigate overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.17267823219299316,
+      "reasoning": "This configuration aims to explore a slightly higher learning rate to potentially improve convergence while keeping the batch size stable. The architecture remains unchanged with three hidden layers to maintain performance. The maximum iterations are extended to allow for deeper training, and early stopping is retained to mitigate overfitting."
+    },
+    {
+      "iteration": 10,
+      "timestamp": "2025-12-25T00:28:23.350951",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.007,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 850,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.006,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains a stable batch size while increasing the learning rate slightly to explore potential convergence improvements. The architecture with three hidden layers is kept consistent to leverage previous performance. The maximum iterations have been adjusted to allow for deeper training, and the alpha value is slightly increased to explore regularization effects. Early stopping is retained to mitigate overfitting."
+      },
+      "score": 0.9,
+      "duration": 0.08426856994628906,
+      "reasoning": "This configuration maintains a stable batch size while increasing the learning rate slightly to explore potential convergence improvements. The architecture with three hidden layers is kept consistent to leverage previous performance. The maximum iterations have been adjusted to allow for deeper training, and the alpha value is slightly increased to explore regularization effects. Early stopping is retained to mitigate overfitting."
+    },
+    {
+      "iteration": 11,
+      "timestamp": "2025-12-25T00:28:29.416919",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0075,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration builds upon the successful parameters by maintaining the effective learning rate and batch size while exploring a slightly different number of maximum iterations. The architecture remains intact to leverage previous performance, and early stopping is retained to avoid overfitting."
+      },
+      "score": 0.9333333333333333,
+      "duration": 0.17427468299865723,
+      "reasoning": "This configuration builds upon the successful parameters by maintaining the effective learning rate and batch size while exploring a slightly different number of maximum iterations. The architecture remains intact to leverage previous performance, and early stopping is retained to avoid overfitting."
+    },
+    {
+      "iteration": 12,
+      "timestamp": "2025-12-25T00:28:34.115692",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0055,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 750,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate to enhance exploration while maintaining the successful architecture and batch size. The maximum iterations are set to a moderate value to allow thorough training, and early stopping is retained to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.6916975975036621,
+      "reasoning": "This configuration slightly increases the learning rate to enhance exploration while maintaining the successful architecture and batch size. The maximum iterations are set to a moderate value to allow thorough training, and early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 13,
+      "timestamp": "2025-12-25T00:28:38.327107",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0045,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.004,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly lowers the learning rate to enhance stability while keeping the batch size consistent. The architecture remains unchanged to leverage previous success. The alpha value is adjusted for regularization exploration, and early stopping is retained to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.4176492691040039,
+      "reasoning": "This configuration slightly lowers the learning rate to enhance stability while keeping the batch size consistent. The architecture remains unchanged to leverage previous success. The alpha value is adjusted for regularization exploration, and early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 14,
+      "timestamp": "2025-12-25T00:28:42.929364",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0065,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 850,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to fine-tune the learning rate slightly upwards to enhance convergence while maintaining the successful batch size. The architecture with three hidden layers is retained to leverage previous success. The maximum iterations are set to a higher value to allow for extensive training, and early stopping is kept to mitigate overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.32784223556518555,
+      "reasoning": "This configuration aims to fine-tune the learning rate slightly upwards to enhance convergence while maintaining the successful batch size. The architecture with three hidden layers is retained to leverage previous success. The maximum iterations are set to a higher value to allow for extensive training, and early stopping is kept to mitigate overfitting."
+    },
+    {
+      "iteration": 15,
+      "timestamp": "2025-12-25T00:28:48.447280",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.006,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 750,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to maintain the successful parameters while slightly adjusting the learning rate to explore its impact on convergence. The architecture remains robust with three hidden layers, and early stopping is retained to prevent overfitting. The maximum iterations are set to allow thorough training without significantly increasing the computational load."
+      },
+      "score": 1.0,
+      "duration": 0.5835750102996826,
+      "reasoning": "This configuration aims to maintain the successful parameters while slightly adjusting the learning rate to explore its impact on convergence. The architecture remains robust with three hidden layers, and early stopping is retained to prevent overfitting. The maximum iterations are set to allow thorough training without significantly increasing the computational load."
+    },
+    {
+      "iteration": 16,
+      "timestamp": "2025-12-25T00:28:54.426404",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0065,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains the successful architecture and learning rate while exploring a smaller batch size for potentially improved convergence. The maximum iterations are set to allow adequate training, and early stopping is retained to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.7151169776916504,
+      "reasoning": "This configuration maintains the successful architecture and learning rate while exploring a smaller batch size for potentially improved convergence. The maximum iterations are set to allow adequate training, and early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 17,
+      "timestamp": "2025-12-25T00:29:00.264466",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.007,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate to explore its impact on convergence while maintaining the successful architecture and batch size. The maximum iterations are set to a moderate value to allow thorough training, and early stopping is retained to prevent overfitting."
+      },
+      "score": 0.9,
+      "duration": 0.7450909614562988,
+      "reasoning": "This configuration slightly increases the learning rate to explore its impact on convergence while maintaining the successful architecture and batch size. The maximum iterations are set to a moderate value to allow thorough training, and early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 18,
+      "timestamp": "2025-12-25T00:29:05.837213",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0055,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate to explore its impact on convergence while maintaining a stable batch size and architecture. The maximum iterations are set to allow thorough training, and early stopping is retained to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.9888296127319336,
+      "reasoning": "This configuration slightly increases the learning rate to explore its impact on convergence while maintaining a stable batch size and architecture. The maximum iterations are set to allow thorough training, and early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 19,
+      "timestamp": "2025-12-25T00:29:10.703407",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0075,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to explore a slightly higher learning rate to potentially improve convergence while maintaining the stable architecture and batch size that have yielded good results. The maximum iterations are set to allow thorough training, and early stopping is retained to mitigate overfitting."
+      },
+      "score": 0.9333333333333333,
+      "duration": 0.2890965938568115,
+      "reasoning": "This configuration aims to explore a slightly higher learning rate to potentially improve convergence while maintaining the stable architecture and batch size that have yielded good results. The maximum iterations are set to allow thorough training, and early stopping is retained to mitigate overfitting."
+    },
+    {
+      "iteration": 20,
+      "timestamp": "2025-12-25T00:29:15.332921",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0075,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration explores a smaller batch size to improve convergence while maintaining a consistent learning rate and architecture that previously yielded high accuracy. The maximum iterations allow sufficient training, and early stopping is retained to prevent overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.04919862747192383,
+      "reasoning": "This configuration explores a smaller batch size to improve convergence while maintaining a consistent learning rate and architecture that previously yielded high accuracy. The maximum iterations allow sufficient training, and early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 21,
+      "timestamp": "2025-12-25T00:29:19.518001",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.008,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 900,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate to explore potential improvements in convergence while maintaining the successful batch size and architecture. The number of iterations is increased to allow more extensive training, and early stopping is retained to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.0640408992767334,
+      "reasoning": "This configuration slightly increases the learning rate to explore potential improvements in convergence while maintaining the successful batch size and architecture. The number of iterations is increased to allow more extensive training, and early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 22,
+      "timestamp": "2025-12-25T00:29:23.963752",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0085,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 900,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains high model performance by slightly increasing the learning rate to explore further improvements in convergence, while keeping a smaller batch size to enhance training stability. The architecture remains unchanged with three hidden layers, and early stopping is retained to mitigate overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.053700923919677734,
+      "reasoning": "This configuration maintains high model performance by slightly increasing the learning rate to explore further improvements in convergence, while keeping a smaller batch size to enhance training stability. The architecture remains unchanged with three hidden layers, and early stopping is retained to mitigate overfitting."
+    },
+    {
+      "iteration": 23,
+      "timestamp": "2025-12-25T00:29:28.765972",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.009,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 900,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to slightly increase the learning rate to further explore potential improvements in convergence while maintaining a smaller batch size for training stability. The model architecture remains unchanged, retaining the three hidden layers. Early stopping is kept to prevent overfitting, and the number of iterations is set to allow thorough training."
+      },
+      "score": 1.0,
+      "duration": 0.07646679878234863,
+      "reasoning": "This configuration aims to slightly increase the learning rate to further explore potential improvements in convergence while maintaining a smaller batch size for training stability. The model architecture remains unchanged, retaining the three hidden layers. Early stopping is kept to prevent overfitting, and the number of iterations is set to allow thorough training."
+    },
+    {
+      "iteration": 24,
+      "timestamp": "2025-12-25T00:29:33.339907",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to explore a higher learning rate to potentially enhance convergence while maintaining a smaller batch size for stability. The maximum iterations are set to the upper limit to allow thorough training, and the architecture remains complex with three hidden layers. Early stopping is retained to prevent overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.1018669605255127,
+      "reasoning": "This configuration aims to explore a higher learning rate to potentially enhance convergence while maintaining a smaller batch size for stability. The maximum iterations are set to the upper limit to allow thorough training, and the architecture remains complex with three hidden layers. Early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 25,
+      "timestamp": "2025-12-25T00:29:37.229648",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration retains the successful learning rate while exploring a larger batch size to potentially improve convergence speed. It keeps the architecture consistent to leverage prior success while maintaining early stopping to mitigate overfitting."
+      },
+      "score": 0.9333333333333333,
+      "duration": 0.1371448040008545,
+      "reasoning": "This configuration retains the successful learning rate while exploring a larger batch size to potentially improve convergence speed. It keeps the architecture consistent to leverage prior success while maintaining early stopping to mitigate overfitting."
+    },
+    {
+      "iteration": 26,
+      "timestamp": "2025-12-25T00:29:43.391227",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.011,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to explore a slightly higher learning rate to enhance convergence while maintaining the successful batch size for stability. The architecture remains unchanged with three hidden layers, and early stopping is retained to prevent overfitting. The maximum iterations are set to allow thorough training."
+      },
+      "score": 1.0,
+      "duration": 0.05706191062927246,
+      "reasoning": "This configuration aims to explore a slightly higher learning rate to enhance convergence while maintaining the successful batch size for stability. The architecture remains unchanged with three hidden layers, and early stopping is retained to prevent overfitting. The maximum iterations are set to allow thorough training."
+    },
+    {
+      "iteration": 27,
+      "timestamp": "2025-12-25T00:29:47.514129",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.012,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to explore a slightly higher learning rate to enhance convergence while maintaining the successful batch size for stability. The architecture remains unchanged with three hidden layers, and early stopping is retained to prevent overfitting. The maximum iterations are set to allow thorough training."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.0578913688659668,
+      "reasoning": "This configuration aims to explore a slightly higher learning rate to enhance convergence while maintaining the successful batch size for stability. The architecture remains unchanged with three hidden layers, and early stopping is retained to prevent overfitting. The maximum iterations are set to allow thorough training."
+    },
+    {
+      "iteration": 28,
+      "timestamp": "2025-12-25T00:29:51.774897",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.006,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 900,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to slightly increase the learning rate to explore better convergence while maintaining a stable batch size. The model architecture remains consistent with three hidden layers, and early stopping is kept to prevent overfitting. A moderate number of iterations is chosen to allow thorough training."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.09869742393493652,
+      "reasoning": "This configuration aims to slightly increase the learning rate to explore better convergence while maintaining a stable batch size. The model architecture remains consistent with three hidden layers, and early stopping is kept to prevent overfitting. A moderate number of iterations is chosen to allow thorough training."
+    },
+    {
+      "iteration": 29,
+      "timestamp": "2025-12-25T00:29:56.368715",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.008,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to fine-tune the learning rate by slightly decreasing it to enhance convergence while maintaining the optimal batch size for stability. The architecture remains consistent with three hidden layers, and early stopping is retained to prevent overfitting. A moderate number of iterations is selected to ensure thorough training."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.055533409118652344,
+      "reasoning": "This configuration aims to fine-tune the learning rate by slightly decreasing it to enhance convergence while maintaining the optimal batch size for stability. The architecture remains consistent with three hidden layers, and early stopping is retained to prevent overfitting. A moderate number of iterations is selected to ensure thorough training."
+    },
+    {
+      "iteration": 30,
+      "timestamp": "2025-12-25T00:30:03.060251",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.013,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to slightly increase the learning rate to further enhance convergence while maintaining a stable batch size. The architecture remains unchanged to leverage prior success, and early stopping is retained to prevent overfitting. The maximum iterations are set for thorough training."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.05255484580993652,
+      "reasoning": "This configuration aims to slightly increase the learning rate to further enhance convergence while maintaining a stable batch size. The architecture remains unchanged to leverage prior success, and early stopping is retained to prevent overfitting. The maximum iterations are set for thorough training."
+    },
+    {
+      "iteration": 31,
+      "timestamp": "2025-12-25T00:30:08.759641",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.007,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.006,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to slightly adjust the learning rate and alpha to explore better convergence while maintaining a stable batch size and architecture. The max iterations are set to allow thorough training, with early stopping retained to prevent overfitting."
+      },
+      "score": 0.9,
+      "duration": 0.0644066333770752,
+      "reasoning": "This configuration aims to slightly adjust the learning rate and alpha to explore better convergence while maintaining a stable batch size and architecture. The max iterations are set to allow thorough training, with early stopping retained to prevent overfitting."
+    },
+    {
+      "iteration": 32,
+      "timestamp": "2025-12-25T00:30:17.088538",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.006,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration retains the successful learning rate and batch size while slightly adjusting the maximum iterations to explore the model's performance over different training durations. The architecture remains consistent with three hidden layers and early stopping to prevent overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.10581517219543457,
+      "reasoning": "This configuration retains the successful learning rate and batch size while slightly adjusting the maximum iterations to explore the model's performance over different training durations. The architecture remains consistent with three hidden layers and early stopping to prevent overfitting."
+    },
+    {
+      "iteration": 33,
+      "timestamp": "2025-12-25T00:30:26.624045",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.007,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 850,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to fine-tune the training duration by adjusting the maximum iterations while maintaining a stable learning rate and batch size. The architecture remains consistent with three hidden layers and early stopping to prevent overfitting. This balance is expected to further enhance model performance."
+      },
+      "score": 0.9,
+      "duration": 0.13747668266296387,
+      "reasoning": "This configuration aims to fine-tune the training duration by adjusting the maximum iterations while maintaining a stable learning rate and batch size. The architecture remains consistent with three hidden layers and early stopping to prevent overfitting. This balance is expected to further enhance model performance."
+    },
+    {
+      "iteration": 34,
+      "timestamp": "2025-12-25T00:30:32.286259",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.004,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 900,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.004,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to slightly decrease the learning rate and alpha to explore finer convergence while retaining the successful batch size and architecture. The maximum iterations are adjusted to allow for thorough training, with early stopping maintained to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.11442089080810547,
+      "reasoning": "This configuration aims to slightly decrease the learning rate and alpha to explore finer convergence while retaining the successful batch size and architecture. The maximum iterations are adjusted to allow for thorough training, with early stopping maintained to prevent overfitting."
+    },
+    {
+      "iteration": 35,
+      "timestamp": "2025-12-25T00:30:36.654230",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.008,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 850,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.006,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration introduces a slight increase in the learning rate to explore potential improvements in convergence while maintaining the successful batch size and architecture. The maximum iterations are adjusted to ensure thorough training, and early stopping is retained to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.1307375431060791,
+      "reasoning": "This configuration introduces a slight increase in the learning rate to explore potential improvements in convergence while maintaining the successful batch size and architecture. The maximum iterations are adjusted to ensure thorough training, and early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 36,
+      "timestamp": "2025-12-25T00:30:42.392955",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 850,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains the successful elements from previous configurations while slightly adjusting the maximum iterations to explore potential improvements in performance. The learning rate and architecture remain stable to ensure effective training."
+      },
+      "score": 1.0,
+      "duration": 0.10807538032531738,
+      "reasoning": "This configuration maintains the successful elements from previous configurations while slightly adjusting the maximum iterations to explore potential improvements in performance. The learning rate and architecture remain stable to ensure effective training."
+    },
+    {
+      "iteration": 37,
+      "timestamp": "2025-12-25T00:30:53.764592",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 900,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains the stable learning rate and batch size from previous successful models while increasing max_iter to allow further training. The architecture remains consistent with three hidden layers and early stopping to prevent overfitting, aiming to explore the limits of the model's performance."
+      },
+      "score": 1.0,
+      "duration": 0.21888136863708496,
+      "reasoning": "This configuration maintains the stable learning rate and batch size from previous successful models while increasing max_iter to allow further training. The architecture remains consistent with three hidden layers and early stopping to prevent overfitting, aiming to explore the limits of the model's performance."
+    },
+    {
+      "iteration": 38,
+      "timestamp": "2025-12-25T00:31:04.249165",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.006,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 950,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to slightly adjust the learning rate to explore finer convergence while maintaining the successful batch size and architecture. The maximum iterations are increased to allow comprehensive training, with early stopping retained to prevent overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.48424315452575684,
+      "reasoning": "This configuration aims to slightly adjust the learning rate to explore finer convergence while maintaining the successful batch size and architecture. The maximum iterations are increased to allow comprehensive training, with early stopping retained to prevent overfitting."
+    },
+    {
+      "iteration": 39,
+      "timestamp": "2025-12-25T00:31:09.872748",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.007,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 900,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration explores a slight increase in the learning rate to potentially enhance convergence while keeping the successful batch size and architecture. The maximum iterations are set to allow adequate training, with early stopping retained to avoid overfitting."
+      },
+      "score": 0.9,
+      "duration": 0.27733492851257324,
+      "reasoning": "This configuration explores a slight increase in the learning rate to potentially enhance convergence while keeping the successful batch size and architecture. The maximum iterations are set to allow adequate training, with early stopping retained to avoid overfitting."
+    },
+    {
+      "iteration": 40,
+      "timestamp": "2025-12-25T00:31:16.879377",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.006,
+        "batch_size": 128,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains the successful learning rate and architecture while increasing the batch size to explore potential improvements in convergence. The maximum iterations are set to allow comprehensive training, and early stopping is retained to prevent overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.37557387351989746,
+      "reasoning": "This configuration maintains the successful learning rate and architecture while increasing the batch size to explore potential improvements in convergence. The maximum iterations are set to allow comprehensive training, and early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 41,
+      "timestamp": "2025-12-25T00:31:23.001503",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 128,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 950,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains the successful learning rate and architecture while slightly adjusting the maximum iterations to explore further improvements in performance. The batch size is increased to 128 to test its effect on convergence, while early stopping is retained to prevent overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.7429964542388916,
+      "reasoning": "This configuration maintains the successful learning rate and architecture while slightly adjusting the maximum iterations to explore further improvements in performance. The batch size is increased to 128 to test its effect on convergence, while early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 42,
+      "timestamp": "2025-12-25T00:31:29.471638",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.004,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 950,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.004,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to slightly decrease the learning rate to explore finer convergence while maintaining the successful batch size and architecture. The maximum iterations are adjusted for further training, with early stopping to prevent overfitting and a slight adjustment to alpha to refine regularization."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.9107439517974854,
+      "reasoning": "This configuration aims to slightly decrease the learning rate to explore finer convergence while maintaining the successful batch size and architecture. The maximum iterations are adjusted for further training, with early stopping to prevent overfitting and a slight adjustment to alpha to refine regularization."
+    },
+    {
+      "iteration": 43,
+      "timestamp": "2025-12-25T00:31:37.125033",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.007,
+        "batch_size": 128,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to slightly increase the learning rate and batch size to explore potential improvements in convergence. The architecture remains the same with three hidden layers, and early stopping is retained to prevent overfitting while allowing for maximum iterations to ensure comprehensive training."
+      },
+      "score": 0.9,
+      "duration": 0.0926518440246582,
+      "reasoning": "This configuration aims to slightly increase the learning rate and batch size to explore potential improvements in convergence. The architecture remains the same with three hidden layers, and early stopping is retained to prevent overfitting while allowing for maximum iterations to ensure comprehensive training."
+    },
+    {
+      "iteration": 44,
+      "timestamp": "2025-12-25T00:31:42.037255",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.008,
+        "batch_size": 128,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate to potentially enhance convergence while using a larger batch size to improve training efficiency. The architecture and early stopping mechanisms remain unchanged to maintain stability in performance."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.1976299285888672,
+      "reasoning": "This configuration slightly increases the learning rate to potentially enhance convergence while using a larger batch size to improve training efficiency. The architecture and early stopping mechanisms remain unchanged to maintain stability in performance."
+    },
+    {
+      "iteration": 45,
+      "timestamp": "2025-12-25T00:31:46.874997",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.006,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains the successful learning rate and architecture while testing the maximum iterations to allow for more comprehensive training. The batch size is kept moderate to balance convergence speed and effectiveness, with early stopping to prevent overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.25519394874572754,
+      "reasoning": "This configuration maintains the successful learning rate and architecture while testing the maximum iterations to allow for more comprehensive training. The batch size is kept moderate to balance convergence speed and effectiveness, with early stopping to prevent overfitting."
+    },
+    {
+      "iteration": 46,
+      "timestamp": "2025-12-25T00:31:51.981351",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0065,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to explore a slight increase in learning rate while keeping a moderate batch size. The maximum iterations are adjusted to allow for sufficient training without overfitting, and the architecture remains consistent to maintain performance stability."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.18148446083068848,
+      "reasoning": "This configuration aims to explore a slight increase in learning rate while keeping a moderate batch size. The maximum iterations are adjusted to allow for sufficient training without overfitting, and the architecture remains consistent to maintain performance stability."
+    },
+    {
+      "iteration": 47,
+      "timestamp": "2025-12-25T00:31:57.660424",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0065,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains the successful learning rate and architecture while testing a higher maximum iteration count to allow for more comprehensive training. The batch size is kept moderate to balance convergence speed and effectiveness, with early stopping retained to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.1289973258972168,
+      "reasoning": "This configuration maintains the successful learning rate and architecture while testing a higher maximum iteration count to allow for more comprehensive training. The batch size is kept moderate to balance convergence speed and effectiveness, with early stopping retained to prevent overfitting."
+    },
+    {
+      "iteration": 48,
+      "timestamp": "2025-12-25T00:32:04.181209",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0065,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.006,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to slightly increase the alpha for regularization while maintaining the previously successful learning rate and architecture. The batch size remains moderate for effective training. Early stopping is kept to prevent overfitting, and the maximum iterations are set to allow comprehensive training."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.1663656234741211,
+      "reasoning": "This configuration aims to slightly increase the alpha for regularization while maintaining the previously successful learning rate and architecture. The batch size remains moderate for effective training. Early stopping is kept to prevent overfitting, and the maximum iterations are set to allow comprehensive training."
+    },
+    {
+      "iteration": 49,
+      "timestamp": "2025-12-25T00:32:09.057679",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.007,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate to explore potential improvements in convergence while maintaining the successful batch size and architecture. The maximum iterations are set to the upper limit to allow for comprehensive training, with early stopping retained to prevent overfitting."
+      },
+      "score": 0.9,
+      "duration": 0.09561514854431152,
+      "reasoning": "This configuration slightly increases the learning rate to explore potential improvements in convergence while maintaining the successful batch size and architecture. The maximum iterations are set to the upper limit to allow for comprehensive training, with early stopping retained to prevent overfitting."
+    },
+    {
+      "iteration": 50,
+      "timestamp": "2025-12-25T00:32:14.226808",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0075,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          150,
+          75,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration increases the learning rate slightly while enhancing the hidden layer architecture for potentially better feature extraction. The batch size remains moderate to balance training efficiency, and early stopping is kept to mitigate overfitting. The maximum iterations are set to the upper limit to ensure comprehensive training."
+      },
+      "score": 0.9333333333333333,
+      "duration": 0.1708824634552002,
+      "reasoning": "This configuration increases the learning rate slightly while enhancing the hidden layer architecture for potentially better feature extraction. The batch size remains moderate to balance training efficiency, and early stopping is kept to mitigate overfitting. The maximum iterations are set to the upper limit to ensure comprehensive training."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "experiment_id": "20251224_195807",
+    "start_time": "2025-12-24T19:58:07.438569",
+    "dataset_info": {
+      "name": "iris",
+      "samples": 150,
+      "features": 4,
+      "classes": 3
+    },
+    "best_config": null,
+    "best_score": 0.0
+  },
+  "configurations": []
+}

@@ -1,0 +1,566 @@
+{
+  "metadata": {
+    "experiment_id": "20251224_200047",
+    "start_time": "2025-12-24T20:00:47.619760",
+    "dataset_info": {
+      "name": "wine",
+      "samples": 178,
+      "features": 13,
+      "classes": 3
+    },
+    "best_config": {
+      "iteration": 10,
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.012,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 950,
+        "hidden_layer_sizes": [
+          250,
+          100
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.007,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration tests a slightly higher learning rate to explore potential improvements in convergence speed. The batch size remains at 32 to maintain stability. The optimizer is kept as 'adam' for faster convergence. The hidden layer sizes are increased to 250 neurons in the first layer to investigate if a larger architecture can capture more complex patterns. The alpha value is adjusted for more regularization to further mitigate overfitting, and early stopping is retained to control model training."
+      },
+      "score": 1.0
+    },
+    "best_score": 1.0,
+    "end_time": "2025-12-24T20:02:55.367416",
+    "total_configurations": 18
+  },
+  "configurations": [
+    {
+      "iteration": 1,
+      "timestamp": "2025-12-24T20:00:57.476562",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 500,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.001,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "The MLP model type is chosen due to the small dataset size, optimizing learning rate and architecture for better convergence. The use of 'adam' optimizer and scaling is to ensure stability in training with multiple features."
+      },
+      "score": 0.8888888888888888,
+      "duration": 0.5355632305145264,
+      "reasoning": "The MLP model type is chosen due to the small dataset size, optimizing learning rate and architecture for better convergence. The use of 'adam' optimizer and scaling is to ensure stability in training with multiple features."
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2025-12-24T20:01:02.784223",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 32,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration explores a different optimizer (sgd) with momentum for improved convergence, while also adjusting the learning rate and hidden layer architecture to capture more complex patterns in the data. The scaling method has been changed to 'minmax' to improve feature normalization."
+      },
+      "score": 0.9166666666666666,
+      "duration": 0.14673638343811035,
+      "reasoning": "This configuration explores a different optimizer (sgd) with momentum for improved convergence, while also adjusting the learning rate and hidden layer architecture to capture more complex patterns in the data. The scaling method has been changed to 'minmax' to improve feature normalization."
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2025-12-24T20:01:08.812871",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.008,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.8,
+        "max_iter": 700,
+        "hidden_layer_sizes": [
+          150,
+          75
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.004,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate and adjusts the architecture for a deeper model while maintaining the use of 'sgd' with momentum for faster convergence. The batch size is also increased to provide better gradient estimates, and 'relu' is used for its effectiveness in deep networks. Early stopping is retained to prevent overfitting."
+      },
+      "score": 0.9444444444444444,
+      "duration": 0.8201360702514648,
+      "reasoning": "This configuration slightly increases the learning rate and adjusts the architecture for a deeper model while maintaining the use of 'sgd' with momentum for faster convergence. The batch size is also increased to provide better gradient estimates, and 'relu' is used for its effectiveness in deep networks. Early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2025-12-24T20:01:15.055562",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.009,
+        "batch_size": 128,
+        "optimizer": "sgd",
+        "momentum": 0.85,
+        "max_iter": 750,
+        "hidden_layer_sizes": [
+          200,
+          100
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration increases the learning rate slightly and adjusts the batch size to explore the effects of larger mini-batches on convergence. The hidden layer architecture is expanded for greater capacity, while maintaining 'sgd' with momentum for improved optimization. Early stopping is retained to mitigate overfitting."
+      },
+      "score": 0.5277777777777778,
+      "duration": 1.0202276706695557,
+      "reasoning": "This configuration increases the learning rate slightly and adjusts the batch size to explore the effects of larger mini-batches on convergence. The hidden layer architecture is expanded for greater capacity, while maintaining 'sgd' with momentum for improved optimization. Early stopping is retained to mitigate overfitting."
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2025-12-24T20:01:20.405432",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.009,
+        "batch_size": 32,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          200,
+          100
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to further explore deeper networks by increasing the number of neurons in the hidden layers while adjusting the activation function to 'tanh' for better performance in deeper architectures. The learning rate is slightly increased to enhance convergence speed, while maintaining the use of 'sgd' with momentum for effective optimization. The batch size is reduced to possibly improve gradient estimation stability, and early stopping is retained to prevent overfitting."
+      },
+      "score": 0.9444444444444444,
+      "duration": 0.35616230964660645,
+      "reasoning": "This configuration aims to further explore deeper networks by increasing the number of neurons in the hidden layers while adjusting the activation function to 'tanh' for better performance in deeper architectures. The learning rate is slightly increased to enhance convergence speed, while maintaining the use of 'sgd' with momentum for effective optimization. The batch size is reduced to possibly improve gradient estimation stability, and early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 6,
+      "timestamp": "2025-12-24T20:01:26.441659",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.009,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.85,
+        "max_iter": 750,
+        "hidden_layer_sizes": [
+          200,
+          75
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains a high learning rate while modifying the architecture for a more complex model with a larger number of neurons in the first hidden layer. The batch size remains the same to balance training stability and convergence speed, and 'relu' is chosen for its effectiveness in deep networks. The optimizer settings are retained to ensure effective optimization while utilizing early stopping to mitigate overfitting."
+      },
+      "score": 0.8888888888888888,
+      "duration": 0.8802680969238281,
+      "reasoning": "This configuration maintains a high learning rate while modifying the architecture for a more complex model with a larger number of neurons in the first hidden layer. The batch size remains the same to balance training stability and convergence speed, and 'relu' is chosen for its effectiveness in deep networks. The optimizer settings are retained to ensure effective optimization while utilizing early stopping to mitigate overfitting."
+    },
+    {
+      "iteration": 7,
+      "timestamp": "2025-12-24T20:01:31.410609",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.007,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          150,
+          100
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration explores a new optimizer (adam) for potentially faster convergence and stability. The learning rate is slightly decreased to balance exploration and convergence speed. The hidden layer architecture is adjusted for a deeper model while retaining 'relu' for effective non-linearity. Early stopping is kept to mitigate overfitting, and the batch size remains moderate to maintain stability in gradient updates."
+      },
+      "score": 0.9444444444444444,
+      "duration": 0.39823317527770996,
+      "reasoning": "This configuration explores a new optimizer (adam) for potentially faster convergence and stability. The learning rate is slightly decreased to balance exploration and convergence speed. The hidden layer architecture is adjusted for a deeper model while retaining 'relu' for effective non-linearity. Early stopping is kept to mitigate overfitting, and the batch size remains moderate to maintain stability in gradient updates."
+    },
+    {
+      "iteration": 8,
+      "timestamp": "2025-12-24T20:01:37.066632",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.009,
+        "batch_size": 32,
+        "optimizer": "sgd",
+        "momentum": 0.85,
+        "max_iter": 850,
+        "hidden_layer_sizes": [
+          200,
+          100
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration explores a moderate increase in max_iter to allow for longer training, while maintaining a stable learning rate and batch size. The hidden layers are kept deep to leverage the previous successful architecture, and 'tanh' is retained for effective learning in deeper models. Early stopping remains to manage overfitting."
+      },
+      "score": 0.9444444444444444,
+      "duration": 0.9011270999908447,
+      "reasoning": "This configuration explores a moderate increase in max_iter to allow for longer training, while maintaining a stable learning rate and batch size. The hidden layers are kept deep to leverage the previous successful architecture, and 'tanh' is retained for effective learning in deeper models. Early stopping remains to manage overfitting."
+    },
+    {
+      "iteration": 9,
+      "timestamp": "2025-12-24T20:01:44.145393",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 900,
+        "hidden_layer_sizes": [
+          200,
+          100
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.006,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to test a higher learning rate while keeping the batch size moderate for stability. The use of 'adam' as an optimizer is to explore faster convergence. The hidden layer architecture remains deep to leverage previous successes. The alpha value is slightly increased to introduce more regularization, and early stopping is maintained to prevent overfitting."
+      },
+      "score": 0.9722222222222222,
+      "duration": 1.8370461463928223,
+      "reasoning": "This configuration aims to test a higher learning rate while keeping the batch size moderate for stability. The use of 'adam' as an optimizer is to explore faster convergence. The hidden layer architecture remains deep to leverage previous successes. The alpha value is slightly increased to introduce more regularization, and early stopping is maintained to prevent overfitting."
+    },
+    {
+      "iteration": 10,
+      "timestamp": "2025-12-24T20:01:51.679413",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.012,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 950,
+        "hidden_layer_sizes": [
+          250,
+          100
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.007,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration tests a slightly higher learning rate to explore potential improvements in convergence speed. The batch size remains at 32 to maintain stability. The optimizer is kept as 'adam' for faster convergence. The hidden layer sizes are increased to 250 neurons in the first layer to investigate if a larger architecture can capture more complex patterns. The alpha value is adjusted for more regularization to further mitigate overfitting, and early stopping is retained to control model training."
+      },
+      "score": 1.0,
+      "duration": 1.0962998867034912,
+      "reasoning": "This configuration tests a slightly higher learning rate to explore potential improvements in convergence speed. The batch size remains at 32 to maintain stability. The optimizer is kept as 'adam' for faster convergence. The hidden layer sizes are increased to 250 neurons in the first layer to investigate if a larger architecture can capture more complex patterns. The alpha value is adjusted for more regularization to further mitigate overfitting, and early stopping is retained to control model training."
+    },
+    {
+      "iteration": 11,
+      "timestamp": "2025-12-24T20:01:59.627786",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.013,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          250,
+          150
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.008,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration further increases the learning rate to explore potential gains in convergence speed while extending the maximum iterations to ensure adequate training. The hidden layer architecture is adjusted to include more neurons in the second layer, which may help capture complex patterns better. The alpha value is increased slightly for more regularization, and early stopping is retained to mitigate overfitting."
+      },
+      "score": 0.8888888888888888,
+      "duration": 2.2782371044158936,
+      "reasoning": "This configuration further increases the learning rate to explore potential gains in convergence speed while extending the maximum iterations to ensure adequate training. The hidden layer architecture is adjusted to include more neurons in the second layer, which may help capture complex patterns better. The alpha value is increased slightly for more regularization, and early stopping is retained to mitigate overfitting."
+    },
+    {
+      "iteration": 12,
+      "timestamp": "2025-12-24T20:02:06.544286",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.013,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          300,
+          100
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.008,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration tests an increase in the number of neurons in the first hidden layer to 300 to capture more complex patterns, while keeping the second layer at 100. The learning rate is slightly increased to explore potential gains, and maximum iterations are set to the maximum to ensure thorough training. The optimizer remains 'adam' for faster convergence, and early stopping is maintained to prevent overfitting."
+      },
+      "score": 0.9722222222222222,
+      "duration": 1.6500096321105957,
+      "reasoning": "This configuration tests an increase in the number of neurons in the first hidden layer to 300 to capture more complex patterns, while keeping the second layer at 100. The learning rate is slightly increased to explore potential gains, and maximum iterations are set to the maximum to ensure thorough training. The optimizer remains 'adam' for faster convergence, and early stopping is maintained to prevent overfitting."
+    },
+    {
+      "iteration": 13,
+      "timestamp": "2025-12-24T20:02:13.204794",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.015,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          300,
+          150
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.009,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration tests a higher learning rate to explore potential improvements in convergence speed while maintaining stability with a batch size of 32. The hidden layer structure is adjusted to include 300 neurons in the first layer and 150 in the second to enhance the model's capacity to capture complex patterns. The alpha value is increased slightly for more regularization, and early stopping is retained to prevent overfitting."
+      },
+      "score": 0.9722222222222222,
+      "duration": 1.671299695968628,
+      "reasoning": "This configuration tests a higher learning rate to explore potential improvements in convergence speed while maintaining stability with a batch size of 32. The hidden layer structure is adjusted to include 300 neurons in the first layer and 150 in the second to enhance the model's capacity to capture complex patterns. The alpha value is increased slightly for more regularization, and early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 14,
+      "timestamp": "2025-12-24T20:02:20.965724",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.015,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          300,
+          200
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.009,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains the successful aspects of the previous best while increasing the complexity of the hidden layer architecture by adding more neurons in the second layer. The learning rate is kept high to explore convergence speed, and early stopping is retained to prevent overfitting."
+      },
+      "score": 0.9722222222222222,
+      "duration": 2.0333425998687744,
+      "reasoning": "This configuration maintains the successful aspects of the previous best while increasing the complexity of the hidden layer architecture by adding more neurons in the second layer. The learning rate is kept high to explore convergence speed, and early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 15,
+      "timestamp": "2025-12-24T20:02:28.348331",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.014,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          300,
+          200
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.008,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to slightly increase the learning rate to 0.014 to explore improvements in convergence speed while maintaining a stable batch size of 32. The hidden layer structure remains robust with 300 and 200 neurons, which has shown success in previous configurations. The momentum is kept at 0.0 with the 'adam' optimizer for faster convergence. Alpha is adjusted to 0.008 for regularization while early stopping and the 'minmax' scaling are retained for optimal training."
+      },
+      "score": 0.9722222222222222,
+      "duration": 1.60829496383667,
+      "reasoning": "This configuration aims to slightly increase the learning rate to 0.014 to explore improvements in convergence speed while maintaining a stable batch size of 32. The hidden layer structure remains robust with 300 and 200 neurons, which has shown success in previous configurations. The momentum is kept at 0.0 with the 'adam' optimizer for faster convergence. Alpha is adjusted to 0.008 for regularization while early stopping and the 'minmax' scaling are retained for optimal training."
+    },
+    {
+      "iteration": 16,
+      "timestamp": "2025-12-24T20:02:35.502007",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.011,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          300,
+          150
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.006,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly reduces the learning rate to explore stability while maintaining a batch size of 32 for effective training. The hidden layer structure is kept at 300 and 150 neurons to leverage previous success while adjusting the alpha value for more regularization. Early stopping is retained to prevent overfitting."
+      },
+      "score": 0.9722222222222222,
+      "duration": 1.5177006721496582,
+      "reasoning": "This configuration slightly reduces the learning rate to explore stability while maintaining a batch size of 32 for effective training. The hidden layer structure is kept at 300 and 150 neurons to leverage previous success while adjusting the alpha value for more regularization. Early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 17,
+      "timestamp": "2025-12-24T20:02:43.123759",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.011,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          250,
+          150
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.006,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains a stable learning rate to ensure convergence while increasing the complexity of the hidden layer by adding more neurons in the second layer. The batch size remains at 32 for stability, and the 'adam' optimizer is retained for faster convergence. The alpha value is slightly adjusted for regularization, and early stopping is kept to control model training and prevent overfitting."
+      },
+      "score": 0.9722222222222222,
+      "duration": 1.7719645500183105,
+      "reasoning": "This configuration maintains a stable learning rate to ensure convergence while increasing the complexity of the hidden layer by adding more neurons in the second layer. The batch size remains at 32 for stability, and the 'adam' optimizer is retained for faster convergence. The alpha value is slightly adjusted for regularization, and early stopping is kept to control model training and prevent overfitting."
+    },
+    {
+      "iteration": 18,
+      "timestamp": "2025-12-24T20:02:50.752921",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.013,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          250,
+          150
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.008,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to slightly increase the learning rate to explore potential improvements in convergence speed while maintaining the successful batch size of 32. The hidden layer structure is kept at 250 and 150 neurons to leverage previous success, while the alpha value is adjusted to 0.008 for regularization. Early stopping is retained to prevent overfitting and the 'minmax' scaling is used to optimize training."
+      },
+      "score": 0.8888888888888888,
+      "duration": 1.7862508296966553,
+      "reasoning": "This configuration aims to slightly increase the learning rate to explore potential improvements in convergence speed while maintaining the successful batch size of 32. The hidden layer structure is kept at 250 and 150 neurons to leverage previous success, while the alpha value is adjusted to 0.008 for regularization. Early stopping is retained to prevent overfitting and the 'minmax' scaling is used to optimize training."
+    }
+  ]
+}

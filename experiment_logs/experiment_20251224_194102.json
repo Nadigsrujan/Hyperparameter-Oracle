@@ -1,0 +1,337 @@
+{
+  "metadata": {
+    "experiment_id": "20251224_194102",
+    "start_time": "2025-12-24T19:41:02.404078",
+    "dataset_info": {
+      "name": "iris",
+      "samples": 150,
+      "features": 4,
+      "classes": 3
+    },
+    "best_config": {
+      "iteration": 2,
+      "params": {
+        "C": 10.0,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Increased C for better margin adjustment and using RBF kernel for non-linear decision boundaries, which may capture more complex patterns in the data. Gamma set to 'scale' for automatic adjustment based on feature size, while degree and coef0 are chosen to explore polynomial characteristics without overfitting."
+      },
+      "score": 1.0
+    },
+    "best_score": 1.0,
+    "end_time": "2025-12-24T19:42:10.473363",
+    "total_configurations": 18
+  },
+  "configurations": [
+    {
+      "iteration": 1,
+      "timestamp": "2025-12-24T19:41:08.285804",
+      "params": {
+        "C": 5.761447396604681,
+        "gamma": 0.20982944637210674,
+        "kernel": "linear",
+        "degree": 5,
+        "coef0": 0.18148469954335755,
+        "shrinking": false,
+        "class_weight": "balanced",
+        "reasoning": "Random exploration (AI assistant not available)"
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.02932906150817871,
+      "reasoning": "Random exploration (AI assistant not available)"
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2025-12-24T19:41:11.252686",
+      "params": {
+        "C": 10.0,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Increased C for better margin adjustment and using RBF kernel for non-linear decision boundaries, which may capture more complex patterns in the data. Gamma set to 'scale' for automatic adjustment based on feature size, while degree and coef0 are chosen to explore polynomial characteristics without overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.004511833190917969,
+      "reasoning": "Increased C for better margin adjustment and using RBF kernel for non-linear decision boundaries, which may capture more complex patterns in the data. Gamma set to 'scale' for automatic adjustment based on feature size, while degree and coef0 are chosen to explore polynomial characteristics without overfitting."
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2025-12-24T19:41:14.706705",
+      "params": {
+        "C": 15.0,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Increased C to further enhance the margin adjustment while maintaining the successful RBF kernel for capturing non-linear patterns. Keeping gamma as 'scale' allows automatic adjustment, and the degree remains at 3 to avoid overfitting while exploring the polynomial characteristics. Shrinking is retained to improve optimization efficiency."
+      },
+      "score": 1.0,
+      "duration": 0.017475605010986328,
+      "reasoning": "Increased C to further enhance the margin adjustment while maintaining the successful RBF kernel for capturing non-linear patterns. Keeping gamma as 'scale' allows automatic adjustment, and the degree remains at 3 to avoid overfitting while exploring the polynomial characteristics. Shrinking is retained to improve optimization efficiency."
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2025-12-24T19:41:18.001592",
+      "params": {
+        "C": 12.0,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Maintaining a high value for C to ensure strong margin separation, while keeping gamma as 'scale' to automatically adjust for the feature size. The rbf kernel is retained for capturing non-linear patterns effectively, with degree and coef0 kept the same to avoid overfitting while confirming successful traits from previous configurations."
+      },
+      "score": 1.0,
+      "duration": 0.0018773078918457031,
+      "reasoning": "Maintaining a high value for C to ensure strong margin separation, while keeping gamma as 'scale' to automatically adjust for the feature size. The rbf kernel is retained for capturing non-linear patterns effectively, with degree and coef0 kept the same to avoid overfitting while confirming successful traits from previous configurations."
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2025-12-24T19:41:22.098545",
+      "params": {
+        "C": 13.0,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Increasing C slightly to further improve margin separation while retaining the successful RBF kernel and gamma set to 'scale' for automatic adjustment. The degree and coef0 are kept consistent as they have shown optimal performance previously, ensuring the model benefits from non-linear capabilities without overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.002827882766723633,
+      "reasoning": "Increasing C slightly to further improve margin separation while retaining the successful RBF kernel and gamma set to 'scale' for automatic adjustment. The degree and coef0 are kept consistent as they have shown optimal performance previously, ensuring the model benefits from non-linear capabilities without overfitting."
+    },
+    {
+      "iteration": 6,
+      "timestamp": "2025-12-24T19:41:25.172560",
+      "params": {
+        "C": 14.0,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Increasing C slightly to improve margin separation while maintaining the RBF kernel for its proven effectiveness with non-linear patterns. Gamma is kept as 'scale' for automatic adjustment, and degree and coef0 are retained to ensure stability and avoid overfitting, based on historical successful configurations."
+      },
+      "score": 1.0,
+      "duration": 0.0029304027557373047,
+      "reasoning": "Increasing C slightly to improve margin separation while maintaining the RBF kernel for its proven effectiveness with non-linear patterns. Gamma is kept as 'scale' for automatic adjustment, and degree and coef0 are retained to ensure stability and avoid overfitting, based on historical successful configurations."
+    },
+    {
+      "iteration": 7,
+      "timestamp": "2025-12-24T19:41:27.751157",
+      "params": {
+        "C": 14.5,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Increasing C slightly to explore further improvements in margin separation, while maintaining the successful RBF kernel and gamma set to 'scale' for optimal adjustment. Keeping degree and coef0 consistent to leverage previously successful performance and avoid overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.029532194137573242,
+      "reasoning": "Increasing C slightly to explore further improvements in margin separation, while maintaining the successful RBF kernel and gamma set to 'scale' for optimal adjustment. Keeping degree and coef0 consistent to leverage previously successful performance and avoid overfitting."
+    },
+    {
+      "iteration": 10,
+      "timestamp": "2025-12-24T19:41:35.697739",
+      "params": {
+        "C": 15.5,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Continuing to increase C to 15.5 to further explore margin separation while retaining the effective RBF kernel, which has shown consistent performance with this dataset. Gamma remains 'scale' for optimal adjustment, and degree and coef0 are kept stable to prevent overfitting based on historical successful configurations."
+      },
+      "score": 1.0,
+      "duration": 0.005697727203369141,
+      "reasoning": "Continuing to increase C to 15.5 to further explore margin separation while retaining the effective RBF kernel, which has shown consistent performance with this dataset. Gamma remains 'scale' for optimal adjustment, and degree and coef0 are kept stable to prevent overfitting based on historical successful configurations."
+    },
+    {
+      "iteration": 11,
+      "timestamp": "2025-12-24T19:41:39.265399",
+      "params": {
+        "C": 16.0,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Increasing C to 16.0 to further enhance margin separation, given the dataset's small size and previous successful configurations with the RBF kernel. Gamma remains 'scale' for optimal automatic adjustment, while degree and coef0 are kept consistent to maintain stability and prevent overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.032190561294555664,
+      "reasoning": "Increasing C to 16.0 to further enhance margin separation, given the dataset's small size and previous successful configurations with the RBF kernel. Gamma remains 'scale' for optimal automatic adjustment, while degree and coef0 are kept consistent to maintain stability and prevent overfitting."
+    },
+    {
+      "iteration": 12,
+      "timestamp": "2025-12-24T19:41:41.901644",
+      "params": {
+        "C": 16.5,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Incrementing C to 16.5 to further explore margin separation while maintaining the effective RBF kernel which has consistently performed well. Gamma remains 'scale' for optimal automatic adjustment, and parameters degree and coef0 are kept stable to leverage the success of previous configurations and minimize overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.13509631156921387,
+      "reasoning": "Incrementing C to 16.5 to further explore margin separation while maintaining the effective RBF kernel which has consistently performed well. Gamma remains 'scale' for optimal automatic adjustment, and parameters degree and coef0 are kept stable to leverage the success of previous configurations and minimize overfitting."
+    },
+    {
+      "iteration": 13,
+      "timestamp": "2025-12-24T19:41:45.348416",
+      "params": {
+        "C": 17.0,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Incrementing C to 17.0 to explore enhanced margin separation while continuing to utilize the effective RBF kernel, which has demonstrated consistent high performance. Gamma remains as 'scale' for optimal adjustment, with degree and coef0 maintained to prevent overfitting based on previous successful configurations."
+      },
+      "score": 1.0,
+      "duration": 0.0027527809143066406,
+      "reasoning": "Incrementing C to 17.0 to explore enhanced margin separation while continuing to utilize the effective RBF kernel, which has demonstrated consistent high performance. Gamma remains as 'scale' for optimal adjustment, with degree and coef0 maintained to prevent overfitting based on previous successful configurations."
+    },
+    {
+      "iteration": 14,
+      "timestamp": "2025-12-24T19:41:48.179574",
+      "params": {
+        "C": 17.5,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Incrementing C to 17.5 to further enhance margin separation while continuing to utilize the effective RBF kernel, which has consistently provided high accuracy. Gamma is kept as 'scale' for optimal adjustment, while degree and coef0 are maintained to minimize overfitting risks based on previous successful configurations."
+      },
+      "score": 1.0,
+      "duration": 0.003748178482055664,
+      "reasoning": "Incrementing C to 17.5 to further enhance margin separation while continuing to utilize the effective RBF kernel, which has consistently provided high accuracy. Gamma is kept as 'scale' for optimal adjustment, while degree and coef0 are maintained to minimize overfitting risks based on previous successful configurations."
+    },
+    {
+      "iteration": 15,
+      "timestamp": "2025-12-24T19:41:51.076391",
+      "params": {
+        "C": 18.0,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Incrementing C to 18.0 to further enhance margin separation while retaining the effective RBF kernel, which has consistently yielded high accuracy. Keeping gamma as 'scale' allows for optimal adjustment based on feature characteristics, and maintaining degree and coef0 minimizes overfitting risks based on previous successful configurations."
+      },
+      "score": 1.0,
+      "duration": 0.001619577407836914,
+      "reasoning": "Incrementing C to 18.0 to further enhance margin separation while retaining the effective RBF kernel, which has consistently yielded high accuracy. Keeping gamma as 'scale' allows for optimal adjustment based on feature characteristics, and maintaining degree and coef0 minimizes overfitting risks based on previous successful configurations."
+    },
+    {
+      "iteration": 16,
+      "timestamp": "2025-12-24T19:41:54.584882",
+      "params": {
+        "C": 18.5,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Incrementing C to 18.5 to further enhance margin separation based on the consistent high performance of the RBF kernel. Gamma is maintained as 'scale' for optimal feature adjustment, while degree and coef0 are kept stable to minimize overfitting risks. This configuration exploits the successful region and continues to explore slight increases in C for potential improvements."
+      },
+      "score": 1.0,
+      "duration": 0.0017938613891601562,
+      "reasoning": "Incrementing C to 18.5 to further enhance margin separation based on the consistent high performance of the RBF kernel. Gamma is maintained as 'scale' for optimal feature adjustment, while degree and coef0 are kept stable to minimize overfitting risks. This configuration exploits the successful region and continues to explore slight increases in C for potential improvements."
+    },
+    {
+      "iteration": 17,
+      "timestamp": "2025-12-24T19:41:57.193759",
+      "params": {
+        "C": 19.0,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Incrementing C to 19.0 to further explore margin separation potential, leveraging the effective RBF kernel that has consistently provided high accuracy. Keeping gamma as 'scale' allows for optimal adjustment based on feature characteristics, while maintaining degree and coef0 minimizes overfitting risks based on previous successful configurations."
+      },
+      "score": 1.0,
+      "duration": 0.0020062923431396484,
+      "reasoning": "Incrementing C to 19.0 to further explore margin separation potential, leveraging the effective RBF kernel that has consistently provided high accuracy. Keeping gamma as 'scale' allows for optimal adjustment based on feature characteristics, while maintaining degree and coef0 minimizes overfitting risks based on previous successful configurations."
+    },
+    {
+      "iteration": 18,
+      "timestamp": "2025-12-24T19:42:00.698601",
+      "params": {
+        "C": 19.5,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Incrementing C to 19.5 to further explore margin enhancement based on the successful trend observed in previous configurations. The RBF kernel has consistently provided high accuracy, and keeping gamma as 'scale' allows for optimal feature adaptation. Maintaining degree and coef0 minimizes overfitting risks while leveraging the strengths of the current successful configuration."
+      },
+      "score": 1.0,
+      "duration": 0.001590728759765625,
+      "reasoning": "Incrementing C to 19.5 to further explore margin enhancement based on the successful trend observed in previous configurations. The RBF kernel has consistently provided high accuracy, and keeping gamma as 'scale' allows for optimal feature adaptation. Maintaining degree and coef0 minimizes overfitting risks while leveraging the strengths of the current successful configuration."
+    },
+    {
+      "iteration": 19,
+      "timestamp": "2025-12-24T19:42:04.298339",
+      "params": {
+        "C": 20.0,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Incrementing C to 20.0 to further exploit the strong margin separation observed in previous configurations. The RBF kernel remains effective for capturing non-linear relationships in the data, while gamma set to 'scale' allows for optimal feature adjustment. Maintaining the degree and coef0 helps to prevent overfitting, leveraging the successful patterns identified in earlier trials."
+      },
+      "score": 1.0,
+      "duration": 0.0026819705963134766,
+      "reasoning": "Incrementing C to 20.0 to further exploit the strong margin separation observed in previous configurations. The RBF kernel remains effective for capturing non-linear relationships in the data, while gamma set to 'scale' allows for optimal feature adjustment. Maintaining the degree and coef0 helps to prevent overfitting, leveraging the successful patterns identified in earlier trials."
+    },
+    {
+      "iteration": 20,
+      "timestamp": "2025-12-24T19:42:07.224420",
+      "params": {
+        "C": 20.5,
+        "gamma": "scale",
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.1,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Incrementing C to 20.5 to further maximize margin separation, capitalizing on the observed trends of high accuracy in previous configurations. The RBF kernel continues to be suitable for capturing complex relationships in the dataset, while keeping gamma as 'scale' ensures optimal feature adaptation. The degree and coef0 remain stable to mitigate overfitting risks while leveraging the successful aspects of past configurations."
+      },
+      "score": 1.0,
+      "duration": 0.0027544498443603516,
+      "reasoning": "Incrementing C to 20.5 to further maximize margin separation, capitalizing on the observed trends of high accuracy in previous configurations. The RBF kernel continues to be suitable for capturing complex relationships in the dataset, while keeping gamma as 'scale' ensures optimal feature adaptation. The degree and coef0 remain stable to mitigate overfitting risks while leveraging the successful aspects of past configurations."
+    }
+  ]
+}

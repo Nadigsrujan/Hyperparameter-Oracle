@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "experiment_id": "20251224_204035",
+    "start_time": "2025-12-24T20:40:35.573287",
+    "dataset_info": {
+      "name": "iris",
+      "samples": 150,
+      "features": 4,
+      "classes": 3
+    },
+    "best_config": {
+      "iteration": 1,
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 300,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.001,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "The Iris dataset is small, and MLP with two hidden layers should capture its complexity well. Adam optimizer is chosen for better convergence, along with early stopping to prevent overfitting. Standard scaling is appropriate for better performance."
+      },
+      "score": 0.9666666666666667
+    },
+    "best_score": 0.9666666666666667,
+    "end_time": "2025-12-24T20:41:08.222359",
+    "total_configurations": 5
+  },
+  "configurations": [
+    {
+      "iteration": 1,
+      "timestamp": "2025-12-24T20:40:42.397564",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 300,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.001,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "The Iris dataset is small, and MLP with two hidden layers should capture its complexity well. Adam optimizer is chosen for better convergence, along with early stopping to prevent overfitting. Standard scaling is appropriate for better performance."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.3995473384857178,
+      "reasoning": "The Iris dataset is small, and MLP with two hidden layers should capture its complexity well. Adam optimizer is chosen for better convergence, along with early stopping to prevent overfitting. Standard scaling is appropriate for better performance."
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2025-12-24T20:40:48.130259",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 500,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.0005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to explore a different optimizer (sgd) with momentum to potentially enhance convergence speed. The learning rate is slightly increased for better training dynamics, and a larger hidden layer architecture is used to capture more complexity in the data. Minmax scaling is selected to see if it improves performance on the MLP."
+      },
+      "score": 0.9333333333333333,
+      "duration": 0.4249253273010254,
+      "reasoning": "This configuration aims to explore a different optimizer (sgd) with momentum to potentially enhance convergence speed. The learning rate is slightly increased for better training dynamics, and a larger hidden layer architecture is used to capture more complexity in the data. Minmax scaling is selected to see if it improves performance on the MLP."
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2025-12-24T20:40:52.592998",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 400,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.0005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to keep the successful architecture while slightly adjusting the learning rate and increasing the batch size for potential improvements in convergence. The Adam optimizer is maintained for stability, and early stopping is used to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.39093494415283203,
+      "reasoning": "This configuration aims to keep the successful architecture while slightly adjusting the learning rate and increasing the batch size for potential improvements in convergence. The Adam optimizer is maintained for stability, and early stopping is used to prevent overfitting."
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2025-12-24T20:40:58.443519",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 400,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.0005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to explore a different activation function (tanh) and a more complex architecture with an additional hidden layer. The learning rate is slightly increased to encourage faster convergence, while keeping other parameters similar to previous successful configurations for consistency."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.5530948638916016,
+      "reasoning": "This configuration aims to explore a different activation function (tanh) and a more complex architecture with an additional hidden layer. The learning rate is slightly increased to encourage faster convergence, while keeping other parameters similar to previous successful configurations for consistency."
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2025-12-24T20:41:03.765919",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 500,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.0001,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains the effective architecture while slightly increasing the max_iter for improved training. The learning rate is set to encourage convergence speed, and the alpha is decreased to explore the effects of regularization. The use of early stopping remains to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.10485076904296875,
+      "reasoning": "This configuration maintains the effective architecture while slightly increasing the max_iter for improved training. The learning rate is set to encourage convergence speed, and the alpha is decreased to explore the effects of regularization. The use of early stopping remains to prevent overfitting."
+    }
+  ]
+}

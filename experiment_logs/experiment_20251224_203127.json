@@ -1,0 +1,642 @@
+{
+  "metadata": {
+    "experiment_id": "20251224_203127",
+    "start_time": "2025-12-24T20:31:27.663251",
+    "dataset_info": {
+      "name": "wine",
+      "samples": 178,
+      "features": 13,
+      "classes": 3
+    },
+    "best_config": {
+      "iteration": 2,
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration introduces a different optimizer (sgd) with momentum to improve convergence speed. The learning rate is slightly increased to explore better performance, and the batch size is larger to allow for more stable updates. The architecture is expanded to include an additional layer, aiming to capture more complex patterns. A moderate alpha is chosen for regularization, and early stopping is retained to prevent overfitting."
+      },
+      "score": 1.0
+    },
+    "best_score": 1.0,
+    "end_time": "2025-12-24T20:33:59.932370",
+    "total_configurations": 20
+  },
+  "configurations": [
+    {
+      "iteration": 1,
+      "timestamp": "2025-12-24T20:31:52.664257",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 500,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "Given the dataset with 178 samples and 3 classes, an MLP model is appropriate for capturing complex patterns. The learning rate is set to a moderate value for stability, and the batch size is kept small for better convergence. The architecture with two hidden layers allows the model to learn a richer representation. Regularization is included with an alpha of 0.01 to prevent overfitting, while early stopping is enabled to halt training if validation performance degrades."
+      },
+      "score": 0.9166666666666666,
+      "duration": 0.6245999336242676,
+      "reasoning": "Given the dataset with 178 samples and 3 classes, an MLP model is appropriate for capturing complex patterns. The learning rate is set to a moderate value for stability, and the batch size is kept small for better convergence. The architecture with two hidden layers allows the model to learn a richer representation. Regularization is included with an alpha of 0.01 to prevent overfitting, while early stopping is enabled to halt training if validation performance degrades."
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2025-12-24T20:32:00.176271",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration introduces a different optimizer (sgd) with momentum to improve convergence speed. The learning rate is slightly increased to explore better performance, and the batch size is larger to allow for more stable updates. The architecture is expanded to include an additional layer, aiming to capture more complex patterns. A moderate alpha is chosen for regularization, and early stopping is retained to prevent overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.7120206356048584,
+      "reasoning": "This configuration introduces a different optimizer (sgd) with momentum to improve convergence speed. The learning rate is slightly increased to explore better performance, and the batch size is larger to allow for more stable updates. The architecture is expanded to include an additional layer, aiming to capture more complex patterns. A moderate alpha is chosen for regularization, and early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2025-12-24T20:32:05.277104",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 700,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration retains the successful architecture while exploring a different learning rate and optimizer. The learning rate is slightly decreased to improve stability, while the batch size is kept moderate for effective gradient updates. The Adam optimizer is chosen to potentially enhance convergence speed. The architecture remains complex to capture intricate patterns in the data, and early stopping is maintained to mitigate overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.11025810241699219,
+      "reasoning": "This configuration retains the successful architecture while exploring a different learning rate and optimizer. The learning rate is slightly decreased to improve stability, while the batch size is kept moderate for effective gradient updates. The Adam optimizer is chosen to potentially enhance convergence speed. The architecture remains complex to capture intricate patterns in the data, and early stopping is maintained to mitigate overfitting."
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2025-12-24T20:32:11.313178",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          150,
+          75
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to explore a different hidden layer architecture with increased width to potentially capture more complex features. The learning rate is kept stable for consistency, while the batch size is moderate for effective updates. The optimizer is changed to Adam to assess its impact on convergence. A slightly higher max_iter allows more training epochs to refine the model further. Regularization remains with an alpha of 0.01, and early stopping is maintained to avoid overfitting."
+      },
+      "score": 0.8888888888888888,
+      "duration": 0.3206014633178711,
+      "reasoning": "This configuration aims to explore a different hidden layer architecture with increased width to potentially capture more complex features. The learning rate is kept stable for consistency, while the batch size is moderate for effective updates. The optimizer is changed to Adam to assess its impact on convergence. A slightly higher max_iter allows more training epochs to refine the model further. Regularization remains with an alpha of 0.01, and early stopping is maintained to avoid overfitting."
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2025-12-24T20:32:16.712233",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 700,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.007,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration builds upon the previous successful setup while slightly adjusting the alpha value for regularization to explore further improvements in generalization. The learning rate and batch size remain stable to maintain effective training dynamics. The architecture is kept consistent as it has shown great promise, and the early stopping feature is retained to prevent overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.25873565673828125,
+      "reasoning": "This configuration builds upon the previous successful setup while slightly adjusting the alpha value for regularization to explore further improvements in generalization. The learning rate and batch size remain stable to maintain effective training dynamics. The architecture is kept consistent as it has shown great promise, and the early stopping feature is retained to prevent overfitting."
+    },
+    {
+      "iteration": 6,
+      "timestamp": "2025-12-24T20:32:21.998434",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.008,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 700,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.006,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration builds upon previous successful setups while slightly tuning the learning rate and alpha for regularization. The batch size remains stable to ensure effective training dynamics. The architecture is consistent as it has shown excellent results, and early stopping is retained to prevent overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.2443075180053711,
+      "reasoning": "This configuration builds upon previous successful setups while slightly tuning the learning rate and alpha for regularization. The batch size remains stable to ensure effective training dynamics. The architecture is consistent as it has shown excellent results, and early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 7,
+      "timestamp": "2025-12-24T20:32:27.437182",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.007,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 750,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.006,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to fine-tune the learning rate and batch size for potentially improved performance while maintaining the successful architecture and optimizer. The max_iter is increased slightly to allow for more training, and early stopping is retained to prevent overfitting."
+      },
+      "score": 0.9722222222222222,
+      "duration": 0.06856107711791992,
+      "reasoning": "This configuration aims to fine-tune the learning rate and batch size for potentially improved performance while maintaining the successful architecture and optimizer. The max_iter is increased slightly to allow for more training, and early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 8,
+      "timestamp": "2025-12-24T20:32:32.797750",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.006,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 750,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.008,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to fine-tune the learning rate and alpha value slightly while maintaining the successful architecture and optimizer configuration. The batch size is kept stable for effective updates, and the max_iter is increased to allow for more training epochs. Early stopping is retained to mitigate overfitting risks."
+      },
+      "score": 1.0,
+      "duration": 0.21359562873840332,
+      "reasoning": "This configuration aims to fine-tune the learning rate and alpha value slightly while maintaining the successful architecture and optimizer configuration. The batch size is kept stable for effective updates, and the max_iter is increased to allow for more training epochs. Early stopping is retained to mitigate overfitting risks."
+    },
+    {
+      "iteration": 9,
+      "timestamp": "2025-12-24T20:32:38.254024",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.009,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.006,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to further fine-tune the learning rate and alpha value to explore a balance between convergence speed and generalization. The batch size remains stable to ensure effective updates, while max_iter is increased to allow for more training epochs. The architecture is kept consistent as it has shown strong performance, and early stopping is retained to mitigate overfitting risks."
+      },
+      "score": 1.0,
+      "duration": 0.20424199104309082,
+      "reasoning": "This configuration aims to further fine-tune the learning rate and alpha value to explore a balance between convergence speed and generalization. The batch size remains stable to ensure effective updates, while max_iter is increased to allow for more training epochs. The architecture is kept consistent as it has shown strong performance, and early stopping is retained to mitigate overfitting risks."
+    },
+    {
+      "iteration": 10,
+      "timestamp": "2025-12-24T20:32:44.021440",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0105,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 700,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.004,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to further explore the performance by slightly increasing the learning rate while retaining the effective optimizer and architecture from previous successful configurations. The momentum is kept high to enhance convergence speed. The alpha value is slightly decreased for regularization to strike a balance between flexibility and overfitting prevention. Early stopping is maintained to mitigate overfitting risks."
+      },
+      "score": 1.0,
+      "duration": 0.26015281677246094,
+      "reasoning": "This configuration aims to further explore the performance by slightly increasing the learning rate while retaining the effective optimizer and architecture from previous successful configurations. The momentum is kept high to enhance convergence speed. The alpha value is slightly decreased for regularization to strike a balance between flexibility and overfitting prevention. Early stopping is maintained to mitigate overfitting risks."
+    },
+    {
+      "iteration": 11,
+      "timestamp": "2025-12-24T20:32:50.012024",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.011,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration builds on the previous optimal setup by slightly increasing the learning rate to explore better convergence while maintaining stability with a larger batch size. The architecture remains the same to leverage its proven performance, and early stopping is retained to mitigate overfitting risks. The momentum is kept high to enhance convergence speed."
+      },
+      "score": 1.0,
+      "duration": 0.29380154609680176,
+      "reasoning": "This configuration builds on the previous optimal setup by slightly increasing the learning rate to explore better convergence while maintaining stability with a larger batch size. The architecture remains the same to leverage its proven performance, and early stopping is retained to mitigate overfitting risks. The momentum is kept high to enhance convergence speed."
+    },
+    {
+      "iteration": 12,
+      "timestamp": "2025-12-24T20:32:55.978432",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.012,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 900,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to further explore the learning rate by slightly increasing it while maintaining the effective optimizer and architecture. The max_iter is increased to allow for additional training time. The batch size is kept stable to ensure effective updates, and early stopping is retained to mitigate overfitting risks."
+      },
+      "score": 1.0,
+      "duration": 0.38604140281677246,
+      "reasoning": "This configuration aims to further explore the learning rate by slightly increasing it while maintaining the effective optimizer and architecture. The max_iter is increased to allow for additional training time. The batch size is kept stable to ensure effective updates, and early stopping is retained to mitigate overfitting risks."
+    },
+    {
+      "iteration": 13,
+      "timestamp": "2025-12-24T20:33:02.660111",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.013,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 950,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.004,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration continues to build on the previous optimal setup by slightly increasing the learning rate to explore better convergence. The max_iter is further increased to allow for extended training time. The architecture remains stable to leverage its proven performance, while alpha is slightly adjusted to maintain a balance between flexibility and overfitting prevention. Early stopping is retained to mitigate overfitting risks."
+      },
+      "score": 1.0,
+      "duration": 0.3293917179107666,
+      "reasoning": "This configuration continues to build on the previous optimal setup by slightly increasing the learning rate to explore better convergence. The max_iter is further increased to allow for extended training time. The architecture remains stable to leverage its proven performance, while alpha is slightly adjusted to maintain a balance between flexibility and overfitting prevention. Early stopping is retained to mitigate overfitting risks."
+    },
+    {
+      "iteration": 14,
+      "timestamp": "2025-12-24T20:33:10.982725",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.014,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.004,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to further explore the learning rate by slightly increasing it while maintaining the effective optimizer and architecture. The max_iter is set to the upper limit to allow for maximum training time. The batch size remains stable to ensure effective updates, and early stopping is retained to mitigate overfitting risks. A slight decrease in alpha is aimed at enhancing model flexibility."
+      },
+      "score": 1.0,
+      "duration": 0.956348180770874,
+      "reasoning": "This configuration aims to further explore the learning rate by slightly increasing it while maintaining the effective optimizer and architecture. The max_iter is set to the upper limit to allow for maximum training time. The batch size remains stable to ensure effective updates, and early stopping is retained to mitigate overfitting risks. A slight decrease in alpha is aimed at enhancing model flexibility."
+    },
+    {
+      "iteration": 15,
+      "timestamp": "2025-12-24T20:33:16.453895",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.015,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.004,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration continues to explore the learning rate by slightly increasing it to potentially enhance convergence. The batch size remains stable for consistency, and the optimizer is kept as 'sgd' with momentum to improve convergence speed. The architecture is unchanged to leverage its proven performance, while early stopping is retained to mitigate overfitting risks. Alpha is slightly decreased to enhance model flexibility."
+      },
+      "score": 1.0,
+      "duration": 0.4482142925262451,
+      "reasoning": "This configuration continues to explore the learning rate by slightly increasing it to potentially enhance convergence. The batch size remains stable for consistency, and the optimizer is kept as 'sgd' with momentum to improve convergence speed. The architecture is unchanged to leverage its proven performance, while early stopping is retained to mitigate overfitting risks. Alpha is slightly decreased to enhance model flexibility."
+    },
+    {
+      "iteration": 16,
+      "timestamp": "2025-12-24T20:33:22.546529",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.02,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.003,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate to 0.02 to enhance convergence while maintaining the batch size and optimizer settings for consistency. The architecture remains the same to leverage proven performance. Alpha is reduced further to 0.003 for improved model flexibility, and early stopping is kept to mitigate overfitting risks."
+      },
+      "score": 1.0,
+      "duration": 0.7139182090759277,
+      "reasoning": "This configuration slightly increases the learning rate to 0.02 to enhance convergence while maintaining the batch size and optimizer settings for consistency. The architecture remains the same to leverage proven performance. Alpha is reduced further to 0.003 for improved model flexibility, and early stopping is kept to mitigate overfitting risks."
+    },
+    {
+      "iteration": 17,
+      "timestamp": "2025-12-24T20:33:27.593340",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.018,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.0035,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate to 0.018 for potentially improved convergence while keeping the batch size and optimizer settings consistent. The architecture remains the same to leverage its proven performance. Alpha is reduced to 0.0035 to enhance model flexibility further, and early stopping is retained to mitigate overfitting risks."
+      },
+      "score": 1.0,
+      "duration": 0.3332488536834717,
+      "reasoning": "This configuration slightly increases the learning rate to 0.018 for potentially improved convergence while keeping the batch size and optimizer settings consistent. The architecture remains the same to leverage its proven performance. Alpha is reduced to 0.0035 to enhance model flexibility further, and early stopping is retained to mitigate overfitting risks."
+    },
+    {
+      "iteration": 18,
+      "timestamp": "2025-12-24T20:33:36.899285",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.017,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.003,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly adjusts the learning rate to 0.017 to explore further improvements in convergence while maintaining the successful batch size and optimizer settings. The architecture remains unchanged to leverage its proven effectiveness. Alpha is slightly reduced to 0.003 to enhance model flexibility, and early stopping is retained to mitigate overfitting risks."
+      },
+      "score": 1.0,
+      "duration": 0.20674443244934082,
+      "reasoning": "This configuration slightly adjusts the learning rate to 0.017 to explore further improvements in convergence while maintaining the successful batch size and optimizer settings. The architecture remains unchanged to leverage its proven effectiveness. Alpha is slightly reduced to 0.003 to enhance model flexibility, and early stopping is retained to mitigate overfitting risks."
+    },
+    {
+      "iteration": 19,
+      "timestamp": "2025-12-24T20:33:45.384719",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.016,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.0035,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly adjusts the learning rate to 0.016 to continue exploring improvements in convergence while maintaining the successful batch size and optimizer settings. The architecture remains unchanged to leverage its proven effectiveness. Alpha is slightly decreased to 0.0035 for enhanced model flexibility, and early stopping is retained to mitigate overfitting risks."
+      },
+      "score": 1.0,
+      "duration": 1.3297958374023438,
+      "reasoning": "This configuration slightly adjusts the learning rate to 0.016 to continue exploring improvements in convergence while maintaining the successful batch size and optimizer settings. The architecture remains unchanged to leverage its proven effectiveness. Alpha is slightly decreased to 0.0035 for enhanced model flexibility, and early stopping is retained to mitigate overfitting risks."
+    },
+    {
+      "iteration": 20,
+      "timestamp": "2025-12-24T20:33:53.727757",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0155,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 1000,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.0035,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration explores a slight increase in the learning rate to 0.0155 for potentially improved convergence while maintaining the successful batch size and optimizer settings. The architecture remains unchanged to leverage its proven performance. Alpha is adjusted to 0.0035 to enhance model flexibility further, and early stopping is retained to mitigate overfitting risks."
+      },
+      "score": 1.0,
+      "duration": 0.2219095230102539,
+      "reasoning": "This configuration explores a slight increase in the learning rate to 0.0155 for potentially improved convergence while maintaining the successful batch size and optimizer settings. The architecture remains unchanged to leverage its proven performance. Alpha is adjusted to 0.0035 to enhance model flexibility further, and early stopping is retained to mitigate overfitting risks."
+    }
+  ]
+}

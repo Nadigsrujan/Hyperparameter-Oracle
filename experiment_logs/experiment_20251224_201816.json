@@ -1,0 +1,343 @@
+{
+  "metadata": {
+    "experiment_id": "20251224_201816",
+    "start_time": "2025-12-24T20:18:16.813079",
+    "dataset_info": {
+      "name": "wine",
+      "samples": 178,
+      "features": 13,
+      "classes": 3
+    },
+    "best_config": {
+      "iteration": 10,
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.009,
+        "batch_size": 32,
+        "optimizer": "sgd",
+        "momentum": 0.85,
+        "max_iter": 700,
+        "hidden_layer_sizes": [
+          100,
+          75,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.004,
+        "early_stopping": true,
+        "criterion": null,
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to slightly adjust the learning rate to 0.009 to refine convergence speed. The batch size is kept at 32 for balance in training efficiency. The optimizer remains as SGD with a momentum of 0.85 to test its impact on performance. The hidden layer architecture is modified to [100, 75, 25] to explore its effectiveness in a deeper setup. Alpha is reduced to 0.004 to observe the effect of regularization. Early stopping, scaling, and class weight settings are retained based on previous successes."
+      },
+      "score": 1.0
+    },
+    "best_score": 1.0,
+    "end_time": "2025-12-24T20:19:17.783514",
+    "total_configurations": 10
+  },
+  "configurations": [
+    {
+      "iteration": 1,
+      "timestamp": "2025-12-24T20:18:23.343564",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 500,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.001,
+        "early_stopping": true,
+        "criterion": null,
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "The MLP model is suitable for this dataset due to its multi-class nature and moderate sample size. A learning rate of 0.001 balances convergence speed and stability, while a batch size of 64 is optimal for training efficiency. The hidden layer configuration of [100, 50] allows for sufficient capacity to capture complex patterns. ReLU activation is chosen for its effectiveness in avoiding vanishing gradients. Early stopping is enabled to prevent overfitting, and class weighting is applied to address potential class imbalance."
+      },
+      "score": 0.8888888888888888,
+      "duration": 0.20013642311096191,
+      "reasoning": "The MLP model is suitable for this dataset due to its multi-class nature and moderate sample size. A learning rate of 0.001 balances convergence speed and stability, while a batch size of 64 is optimal for training efficiency. The hidden layer configuration of [100, 50] allows for sufficient capacity to capture complex patterns. ReLU activation is chosen for its effectiveness in avoiding vanishing gradients. Early stopping is enabled to prevent overfitting, and class weighting is applied to address potential class imbalance."
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2025-12-24T20:18:28.911897",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 32,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": null,
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration leverages a higher learning rate of 0.01 to speed up convergence while testing a different optimizer (SGD) with momentum for potentially better results. The batch size is reduced to 32 for more frequent updates. The hidden layer configuration is expanded to [100, 50, 25] to explore deeper architectures, and 'tanh' is chosen for its ability to model complex relationships. Early stopping remains to mitigate overfitting, and the scaling method is changed to 'minmax' to see if it improves performance."
+      },
+      "score": 0.9722222222222222,
+      "duration": 0.20076918601989746,
+      "reasoning": "This configuration leverages a higher learning rate of 0.01 to speed up convergence while testing a different optimizer (SGD) with momentum for potentially better results. The batch size is reduced to 32 for more frequent updates. The hidden layer configuration is expanded to [100, 50, 25] to explore deeper architectures, and 'tanh' is chosen for its ability to model complex relationships. Early stopping remains to mitigate overfitting, and the scaling method is changed to 'minmax' to see if it improves performance."
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2025-12-24T20:18:34.469726",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 700,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.002,
+        "early_stopping": true,
+        "criterion": null,
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to fine-tune the previous best model by adjusting the learning rate to 0.005 for a more gradual convergence, while switching the optimizer to 'adam' for potentially improved performance. The batch size remains at 32 for efficient updates. The hidden layer architecture is kept the same to maintain complexity. The alpha value is slightly reduced to 0.002 to test lower regularization impact. Early stopping is still included to mitigate overfitting, and scaling is set to 'minmax' based on previous success."
+      },
+      "score": 0.9722222222222222,
+      "duration": 0.10053348541259766,
+      "reasoning": "This configuration aims to fine-tune the previous best model by adjusting the learning rate to 0.005 for a more gradual convergence, while switching the optimizer to 'adam' for potentially improved performance. The batch size remains at 32 for efficient updates. The hidden layer architecture is kept the same to maintain complexity. The alpha value is slightly reduced to 0.002 to test lower regularization impact. Early stopping is still included to mitigate overfitting, and scaling is set to 'minmax' based on previous success."
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2025-12-24T20:18:39.419995",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.003,
+        "early_stopping": true,
+        "criterion": null,
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to further explore the performance of the MLP model by slightly adjusting the learning rate to 0.005 for a gradual convergence and increasing the batch size to 64 for improved training efficiency. Keeping the hidden layer architecture the same allows for consistent evaluation of depth. The alpha value is adjusted to 0.003 to test the impact of regularization, while maintaining early stopping to prevent overfitting and continuing with minmax scaling based on previous results."
+      },
+      "score": 0.9444444444444444,
+      "duration": 0.19720673561096191,
+      "reasoning": "This configuration aims to further explore the performance of the MLP model by slightly adjusting the learning rate to 0.005 for a gradual convergence and increasing the batch size to 64 for improved training efficiency. Keeping the hidden layer architecture the same allows for consistent evaluation of depth. The alpha value is adjusted to 0.003 to test the impact of regularization, while maintaining early stopping to prevent overfitting and continuing with minmax scaling based on previous results."
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2025-12-24T20:18:44.859527",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.015,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 700,
+        "hidden_layer_sizes": [
+          100,
+          75,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.006,
+        "early_stopping": true,
+        "criterion": null,
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration tests a slightly higher learning rate of 0.015 to potentially accelerate convergence. The batch size remains at 32 for efficiency. The hidden layer architecture is adjusted to [100, 75, 25] to explore a different depth configuration. 'tanh' activation is retained for its effectiveness, while alpha is slightly increased to 0.006 to adjust regularization. Early stopping is maintained to prevent overfitting, and scaling is kept as 'minmax' based on previous success."
+      },
+      "score": 0.9444444444444444,
+      "duration": 0.5759217739105225,
+      "reasoning": "This configuration tests a slightly higher learning rate of 0.015 to potentially accelerate convergence. The batch size remains at 32 for efficiency. The hidden layer architecture is adjusted to [100, 75, 25] to explore a different depth configuration. 'tanh' activation is retained for its effectiveness, while alpha is slightly increased to 0.006 to adjust regularization. Early stopping is maintained to prevent overfitting, and scaling is kept as 'minmax' based on previous success."
+    },
+    {
+      "iteration": 6,
+      "timestamp": "2025-12-24T20:18:50.009947",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.008,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 650,
+        "hidden_layer_sizes": [
+          100,
+          75,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.004,
+        "early_stopping": true,
+        "criterion": null,
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration fine-tunes the previous best model by slightly reducing the learning rate to 0.008 for a more gradual convergence. The batch size remains at 32 for efficiency. The hidden layer architecture is kept the same to maintain performance while testing a lower alpha value of 0.004 to reduce regularization impact. Early stopping is retained to prevent overfitting, and scaling continues with 'minmax' based on previous success."
+      },
+      "score": 0.9444444444444444,
+      "duration": 0.05474734306335449,
+      "reasoning": "This configuration fine-tunes the previous best model by slightly reducing the learning rate to 0.008 for a more gradual convergence. The batch size remains at 32 for efficiency. The hidden layer architecture is kept the same to maintain performance while testing a lower alpha value of 0.004 to reduce regularization impact. Early stopping is retained to prevent overfitting, and scaling continues with 'minmax' based on previous success."
+    },
+    {
+      "iteration": 7,
+      "timestamp": "2025-12-24T20:18:55.821461",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.007,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 750,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.003,
+        "early_stopping": true,
+        "criterion": null,
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to fine-tune the previous best model by adjusting the learning rate to 0.007 for a more gradual convergence, maintaining a larger batch size of 64 for improved training efficiency. The hidden layer architecture remains consistent to evaluate depth performance, while the alpha value is slightly adjusted to 0.003 to test regularization impact. Early stopping is included to mitigate overfitting, and scaling is retained as 'minmax' based on previous successful configurations."
+      },
+      "score": 0.8888888888888888,
+      "duration": 0.13665318489074707,
+      "reasoning": "This configuration aims to fine-tune the previous best model by adjusting the learning rate to 0.007 for a more gradual convergence, maintaining a larger batch size of 64 for improved training efficiency. The hidden layer architecture remains consistent to evaluate depth performance, while the alpha value is slightly adjusted to 0.003 to test regularization impact. Early stopping is included to mitigate overfitting, and scaling is retained as 'minmax' based on previous successful configurations."
+    },
+    {
+      "iteration": 8,
+      "timestamp": "2025-12-24T20:19:00.461711",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.006,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 750,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.003,
+        "early_stopping": true,
+        "criterion": null,
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to fine-tune the model by slightly lowering the learning rate to 0.006 for more gradual convergence, while increasing the batch size to 64 for improved training efficiency. The hidden layer sizes remain the same to maintain consistency. The alpha value is kept at 0.003 to observe its impact on regularization, and early stopping is retained to avoid overfitting. Scaling continues with 'minmax' based on its previous success."
+      },
+      "score": 0.9166666666666666,
+      "duration": 0.26499032974243164,
+      "reasoning": "This configuration aims to fine-tune the model by slightly lowering the learning rate to 0.006 for more gradual convergence, while increasing the batch size to 64 for improved training efficiency. The hidden layer sizes remain the same to maintain consistency. The alpha value is kept at 0.003 to observe its impact on regularization, and early stopping is retained to avoid overfitting. Scaling continues with 'minmax' based on its previous success."
+    },
+    {
+      "iteration": 9,
+      "timestamp": "2025-12-24T20:19:06.666393",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.012,
+        "batch_size": 32,
+        "optimizer": "sgd",
+        "momentum": 0.8,
+        "max_iter": 650,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": null,
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration adjusts the learning rate slightly to 0.012 for a balanced approach to convergence speed. The batch size remains at 32 for efficiency. The optimizer is kept as SGD with a momentum of 0.8 to explore its impact on performance. The hidden layer structure remains unchanged to maintain depth. Alpha is kept at 0.005 to continue testing regularization impact, while early stopping, scaling, and class weight settings are retained for consistency based on previous successes."
+      },
+      "score": 0.9444444444444444,
+      "duration": 0.13686633110046387,
+      "reasoning": "This configuration adjusts the learning rate slightly to 0.012 for a balanced approach to convergence speed. The batch size remains at 32 for efficiency. The optimizer is kept as SGD with a momentum of 0.8 to explore its impact on performance. The hidden layer structure remains unchanged to maintain depth. Alpha is kept at 0.005 to continue testing regularization impact, while early stopping, scaling, and class weight settings are retained for consistency based on previous successes."
+    },
+    {
+      "iteration": 10,
+      "timestamp": "2025-12-24T20:19:11.511970",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.009,
+        "batch_size": 32,
+        "optimizer": "sgd",
+        "momentum": 0.85,
+        "max_iter": 700,
+        "hidden_layer_sizes": [
+          100,
+          75,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.004,
+        "early_stopping": true,
+        "criterion": null,
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to slightly adjust the learning rate to 0.009 to refine convergence speed. The batch size is kept at 32 for balance in training efficiency. The optimizer remains as SGD with a momentum of 0.85 to test its impact on performance. The hidden layer architecture is modified to [100, 75, 25] to explore its effectiveness in a deeper setup. Alpha is reduced to 0.004 to observe the effect of regularization. Early stopping, scaling, and class weight settings are retained based on previous successes."
+      },
+      "score": 1.0,
+      "duration": 0.14587926864624023,
+      "reasoning": "This configuration aims to slightly adjust the learning rate to 0.009 to refine convergence speed. The batch size is kept at 32 for balance in training efficiency. The optimizer remains as SGD with a momentum of 0.85 to test its impact on performance. The hidden layer architecture is modified to [100, 75, 25] to explore its effectiveness in a deeper setup. Alpha is reduced to 0.004 to observe the effect of regularization. Early stopping, scaling, and class weight settings are retained based on previous successes."
+    }
+  ]
+}

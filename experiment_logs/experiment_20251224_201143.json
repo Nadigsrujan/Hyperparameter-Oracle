@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "experiment_id": "20251224_201143",
+    "start_time": "2025-12-24T20:11:43.636767",
+    "dataset_info": {
+      "name": "iris",
+      "samples": 150,
+      "features": 4,
+      "classes": 3
+    },
+    "best_config": {
+      "iteration": 1,
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 500,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "Given the small size of the iris dataset and its three classes, an MLP with two hidden layers (100 and 50 neurons) is likely to capture the complexity without overfitting. Using 'adam' optimizer with a low learning rate allows for stable convergence. Early stopping can prevent overfitting, and standard scaling is generally effective for MLPs."
+      },
+      "score": 0.9666666666666667
+    },
+    "best_score": 0.9666666666666667,
+    "end_time": "2025-12-24T20:12:16.663854",
+    "total_configurations": 5
+  },
+  "configurations": [
+    {
+      "iteration": 1,
+      "timestamp": "2025-12-24T20:11:52.846826",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 500,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "Given the small size of the iris dataset and its three classes, an MLP with two hidden layers (100 and 50 neurons) is likely to capture the complexity without overfitting. Using 'adam' optimizer with a low learning rate allows for stable convergence. Early stopping can prevent overfitting, and standard scaling is generally effective for MLPs."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.1827259063720703,
+      "reasoning": "Given the small size of the iris dataset and its three classes, an MLP with two hidden layers (100 and 50 neurons) is likely to capture the complexity without overfitting. Using 'adam' optimizer with a low learning rate allows for stable convergence. Early stopping can prevent overfitting, and standard scaling is generally effective for MLPs."
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2025-12-24T20:11:58.564559",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          100
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to explore a different optimizer ('sgd') with momentum for potentially faster convergence. The learning rate is slightly increased for better exploration, and a larger batch size is used. The hidden layer configuration is modified to have two layers of 100 neurons to increase model capacity while maintaining stability, with 'tanh' activation to capture non-linearity effectively."
+      },
+      "score": 0.9333333333333333,
+      "duration": 0.15960955619812012,
+      "reasoning": "This configuration aims to explore a different optimizer ('sgd') with momentum for potentially faster convergence. The learning rate is slightly increased for better exploration, and a larger batch size is used. The hidden layer configuration is modified to have two layers of 100 neurons to increase model capacity while maintaining stability, with 'tanh' activation to capture non-linearity effectively."
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2025-12-24T20:12:03.266038",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 700,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration explores a larger batch size and a momentum-based SGD optimizer to potentially accelerate convergence while maintaining model capacity with the same hidden layer structure. The learning rate is kept stable to ensure effective exploration around the best-performing setup, while still applying early stopping to mitigate overfitting."
+      },
+      "score": 0.9,
+      "duration": 0.20928645133972168,
+      "reasoning": "This configuration explores a larger batch size and a momentum-based SGD optimizer to potentially accelerate convergence while maintaining model capacity with the same hidden layer structure. The learning rate is kept stable to ensure effective exploration around the best-performing setup, while still applying early stopping to mitigate overfitting."
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2025-12-24T20:12:08.257986",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.002,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate for better exploration while maintaining a good batch size for stability. By keeping the same hidden layer sizes and activation function as the best-performing model, we aim to fine-tune the parameters to achieve improved accuracy. The optimizer remains 'adam' with early stopping to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.20402765274047852,
+      "reasoning": "This configuration slightly increases the learning rate for better exploration while maintaining a good batch size for stability. By keeping the same hidden layer sizes and activation function as the best-performing model, we aim to fine-tune the parameters to achieve improved accuracy. The optimizer remains 'adam' with early stopping to prevent overfitting."
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2025-12-24T20:12:12.217963",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration builds on previous successful setups by slightly increasing the learning rate for exploration while maintaining stability with a batch size of 64. The choice of 'adam' optimizer ensures effective training, and keeping the same hidden layer sizes and activation function leverages the previous model's strengths. Early stopping is included to prevent overfitting, and standard scaling is retained for optimal performance."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.10315704345703125,
+      "reasoning": "This configuration builds on previous successful setups by slightly increasing the learning rate for exploration while maintaining stability with a batch size of 64. The choice of 'adam' optimizer ensures effective training, and keeping the same hidden layer sizes and activation function leverages the previous model's strengths. Early stopping is included to prevent overfitting, and standard scaling is retained for optimal performance."
+    }
+  ]
+}

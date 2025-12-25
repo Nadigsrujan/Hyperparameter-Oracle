@@ -1,0 +1,625 @@
+{
+  "metadata": {
+    "experiment_id": "20251225_003237",
+    "start_time": "2025-12-25T00:32:37.036157",
+    "dataset_info": {
+      "name": "iris",
+      "samples": 150,
+      "features": 4,
+      "classes": 3
+    },
+    "best_config": {
+      "iteration": 6,
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.003,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate to 0.003 while maintaining the successful batch size of 32 and architecture of two hidden layers (100, 50) with ReLU activation. The aim is to explore potential improvements in convergence speed and performance, while early stopping is enabled to prevent overfitting."
+      },
+      "score": 1.0
+    },
+    "best_score": 1.0,
+    "end_time": "2025-12-25T00:34:42.539470",
+    "total_configurations": 20
+  },
+  "configurations": [
+    {
+      "iteration": 1,
+      "timestamp": "2025-12-25T00:32:46.845010",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 500,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "The iris dataset is small with 150 samples and 4 features, making it suitable for MLP with a relatively simple architecture. A learning rate of 0.001 and batch size of 32 provide a good balance for training. The chosen architecture of two layers (100, 50) with ReLU activation is effective for multi-class classification. Early stopping is enabled to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.13035130500793457,
+      "reasoning": "The iris dataset is small with 150 samples and 4 features, making it suitable for MLP with a relatively simple architecture. A learning rate of 0.001 and batch size of 32 provide a good balance for training. The chosen architecture of two layers (100, 50) with ReLU activation is effective for multi-class classification. Early stopping is enabled to prevent overfitting."
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2025-12-25T00:32:52.607341",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration introduces a slightly higher learning rate and batch size to potentially accelerate convergence while exploring a more complex architecture with three hidden layers, which may capture more intricate patterns in the dataset. The 'tanh' activation function is selected to see if it improves performance over 'relu', and early stopping remains enabled to guard against overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.4814310073852539,
+      "reasoning": "This configuration introduces a slightly higher learning rate and batch size to potentially accelerate convergence while exploring a more complex architecture with three hidden layers, which may capture more intricate patterns in the dataset. The 'tanh' activation function is selected to see if it improves performance over 'relu', and early stopping remains enabled to guard against overfitting."
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2025-12-25T00:32:57.514235",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.002,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate to 0.002 while maintaining the same batch size and architecture as the best configuration. This may help in exploring the parameter space more effectively. The same hidden layer structure with ReLU activation is kept, along with early stopping to mitigate overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.2833578586578369,
+      "reasoning": "This configuration slightly increases the learning rate to 0.002 while maintaining the same batch size and architecture as the best configuration. This may help in exploring the parameter space more effectively. The same hidden layer structure with ReLU activation is kept, along with early stopping to mitigate overfitting."
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2025-12-25T00:33:03.307684",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0025,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.0075,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration introduces a mid-range learning rate of 0.0025 and a larger batch size of 64 to enhance convergence speed while keeping the architecture of three hidden layers to capture more complex patterns. The alpha value is slightly adjusted to 0.0075 for regularization, and early stopping is maintained to mitigate overfitting."
+      },
+      "score": 0.9,
+      "duration": 0.5822970867156982,
+      "reasoning": "This configuration introduces a mid-range learning rate of 0.0025 and a larger batch size of 64 to enhance convergence speed while keeping the architecture of three hidden layers to capture more complex patterns. The alpha value is slightly adjusted to 0.0075 for regularization, and early stopping is maintained to mitigate overfitting."
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2025-12-25T00:33:09.123484",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.002,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains the successful architecture of two hidden layers with a learning rate of 0.002 while increasing the batch size to 64 to potentially improve convergence speed. The optimizer remains 'adam' to leverage its adaptive learning capabilities, and early stopping continues to prevent overfitting. The chosen values are consistent with previous successful runs, aiming to validate improvements in performance."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.5396873950958252,
+      "reasoning": "This configuration maintains the successful architecture of two hidden layers with a learning rate of 0.002 while increasing the batch size to 64 to potentially improve convergence speed. The optimizer remains 'adam' to leverage its adaptive learning capabilities, and early stopping continues to prevent overfitting. The chosen values are consistent with previous successful runs, aiming to validate improvements in performance."
+    },
+    {
+      "iteration": 6,
+      "timestamp": "2025-12-25T00:33:16.928572",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.003,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate to 0.003 while maintaining the successful batch size of 32 and architecture of two hidden layers (100, 50) with ReLU activation. The aim is to explore potential improvements in convergence speed and performance, while early stopping is enabled to prevent overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.16579890251159668,
+      "reasoning": "This configuration slightly increases the learning rate to 0.003 while maintaining the successful batch size of 32 and architecture of two hidden layers (100, 50) with ReLU activation. The aim is to explore potential improvements in convergence speed and performance, while early stopping is enabled to prevent overfitting."
+    },
+    {
+      "iteration": 7,
+      "timestamp": "2025-12-25T00:33:24.698328",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.004,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate to 0.004 while maintaining the successful batch size of 32 and architecture of two hidden layers (100, 50) with ReLU activation. The aim is to further enhance convergence speed while keeping the benefits of early stopping and regularization. This allows for a potential improvement in performance based on previous successful configurations."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.5030221939086914,
+      "reasoning": "This configuration slightly increases the learning rate to 0.004 while maintaining the successful batch size of 32 and architecture of two hidden layers (100, 50) with ReLU activation. The aim is to further enhance convergence speed while keeping the benefits of early stopping and regularization. This allows for a potential improvement in performance based on previous successful configurations."
+    },
+    {
+      "iteration": 8,
+      "timestamp": "2025-12-25T00:33:30.698574",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0045,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate to 0.0045 while maintaining the successful batch size of 32 and architecture of two hidden layers (100, 50) with ReLU activation. The aim is to enhance convergence speed while keeping early stopping and regularization in place to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.3394303321838379,
+      "reasoning": "This configuration slightly increases the learning rate to 0.0045 while maintaining the successful batch size of 32 and architecture of two hidden layers (100, 50) with ReLU activation. The aim is to enhance convergence speed while keeping early stopping and regularization in place to prevent overfitting."
+    },
+    {
+      "iteration": 9,
+      "timestamp": "2025-12-25T00:33:36.368755",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0035,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate to 0.0035 while maintaining the successful batch size of 32 and architecture of two hidden layers (100, 50) with ReLU activation. The aim is to fine-tune the learning rate for potentially better convergence speed and performance, while keeping early stopping and regularization in place to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.11705684661865234,
+      "reasoning": "This configuration slightly increases the learning rate to 0.0035 while maintaining the successful batch size of 32 and architecture of two hidden layers (100, 50) with ReLU activation. The aim is to fine-tune the learning rate for potentially better convergence speed and performance, while keeping early stopping and regularization in place to prevent overfitting."
+    },
+    {
+      "iteration": 10,
+      "timestamp": "2025-12-25T00:33:42.731200",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0035,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate to 0.0035 while maintaining the successful batch size of 32 and architecture of two hidden layers (100, 50) with ReLU activation. The purpose is to further fine-tune the learning rate for potentially better convergence speed and performance, while keeping early stopping and regularization in place to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.08865189552307129,
+      "reasoning": "This configuration slightly increases the learning rate to 0.0035 while maintaining the successful batch size of 32 and architecture of two hidden layers (100, 50) with ReLU activation. The purpose is to further fine-tune the learning rate for potentially better convergence speed and performance, while keeping early stopping and regularization in place to prevent overfitting."
+    },
+    {
+      "iteration": 11,
+      "timestamp": "2025-12-25T00:33:47.696042",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.004,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration increases the learning rate to 0.004 while maintaining the successful batch size of 32 and architecture of two hidden layers (100, 50) with ReLU activation. This adjustment aims to explore potential improvements in convergence speed while keeping early stopping and regularization to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.08986473083496094,
+      "reasoning": "This configuration increases the learning rate to 0.004 while maintaining the successful batch size of 32 and architecture of two hidden layers (100, 50) with ReLU activation. This adjustment aims to explore potential improvements in convergence speed while keeping early stopping and regularization to prevent overfitting."
+    },
+    {
+      "iteration": 12,
+      "timestamp": "2025-12-25T00:33:53.420443",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0035,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains the best performing learning rate of 0.0035 with the same batch size and architecture as previous successful configurations. The aim is to verify if this slight adjustment continues to perform optimally while keeping early stopping and regularization in place."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.09005022048950195,
+      "reasoning": "This configuration maintains the best performing learning rate of 0.0035 with the same batch size and architecture as previous successful configurations. The aim is to verify if this slight adjustment continues to perform optimally while keeping early stopping and regularization in place."
+    },
+    {
+      "iteration": 13,
+      "timestamp": "2025-12-25T00:33:59.121602",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0025,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration reduces the learning rate to 0.0025 to explore if lower rates can yield better convergence and performance while keeping the optimal batch size and architecture from previous configurations. Early stopping is retained to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.11186385154724121,
+      "reasoning": "This configuration reduces the learning rate to 0.0025 to explore if lower rates can yield better convergence and performance while keeping the optimal batch size and architecture from previous configurations. Early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 14,
+      "timestamp": "2025-12-25T00:34:06.404708",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0035,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains the successful learning rate of 0.0035 while exploring the same batch size and architecture that yielded high accuracy previously. The aim is to verify stability in performance with the same parameters while keeping early stopping and regularization to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.11173415184020996,
+      "reasoning": "This configuration maintains the successful learning rate of 0.0035 while exploring the same batch size and architecture that yielded high accuracy previously. The aim is to verify stability in performance with the same parameters while keeping early stopping and regularization to prevent overfitting."
+    },
+    {
+      "iteration": 15,
+      "timestamp": "2025-12-25T00:34:12.879487",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0035,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains the previously successful learning rate of 0.0035, batch size of 32, and architecture of two hidden layers (100, 50) with ReLU activation. The aim is to confirm stability in performance and ensure consistency while retaining early stopping and regularization to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.08625316619873047,
+      "reasoning": "This configuration maintains the previously successful learning rate of 0.0035, batch size of 32, and architecture of two hidden layers (100, 50) with ReLU activation. The aim is to confirm stability in performance and ensure consistency while retaining early stopping and regularization to prevent overfitting."
+    },
+    {
+      "iteration": 16,
+      "timestamp": "2025-12-25T00:34:17.696598",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0035,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains the successful learning rate of 0.0035 and batch size of 32 while exploring a new activation function, tanh, to see if it can improve performance over the previously used ReLU activation. All other parameters remain consistent with the successful configurations to ensure stability and regularization."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.08754730224609375,
+      "reasoning": "This configuration maintains the successful learning rate of 0.0035 and batch size of 32 while exploring a new activation function, tanh, to see if it can improve performance over the previously used ReLU activation. All other parameters remain consistent with the successful configurations to ensure stability and regularization."
+    },
+    {
+      "iteration": 17,
+      "timestamp": "2025-12-25T00:34:22.503965",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0035,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains the successful learning rate of 0.0035 and batch size of 32 while exploring the tanh activation function to evaluate its impact on model performance. All other parameters remain consistent to ensure stability and regularization."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.07587647438049316,
+      "reasoning": "This configuration maintains the successful learning rate of 0.0035 and batch size of 32 while exploring the tanh activation function to evaluate its impact on model performance. All other parameters remain consistent to ensure stability and regularization."
+    },
+    {
+      "iteration": 18,
+      "timestamp": "2025-12-25T00:34:26.860474",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.004,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly increases the learning rate to 0.004 to explore potential improvements in convergence speed while maintaining the successful batch size, hidden layer architecture, and ReLU activation that previously yielded high performance."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.24947309494018555,
+      "reasoning": "This configuration slightly increases the learning rate to 0.004 to explore potential improvements in convergence speed while maintaining the successful batch size, hidden layer architecture, and ReLU activation that previously yielded high performance."
+    },
+    {
+      "iteration": 19,
+      "timestamp": "2025-12-25T00:34:31.257779",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0035,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration increases the batch size to 64 to explore the potential for improved training stability and convergence speed while retaining the successful learning rate and hidden layer architecture. All other parameters are kept consistent to ensure comparability with previous high-performing configurations."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.11870241165161133,
+      "reasoning": "This configuration increases the batch size to 64 to explore the potential for improved training stability and convergence speed while retaining the successful learning rate and hidden layer architecture. All other parameters are kept consistent to ensure comparability with previous high-performing configurations."
+    },
+    {
+      "iteration": 20,
+      "timestamp": "2025-12-25T00:34:37.176445",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.0025,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration explores a slightly reduced learning rate of 0.0025 while maintaining the successful batch size and architecture. The use of the tanh activation function is continued to assess its impact on performance, with early stopping enabled to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.07191872596740723,
+      "reasoning": "This configuration explores a slightly reduced learning rate of 0.0025 while maintaining the successful batch size and architecture. The use of the tanh activation function is continued to assess its impact on performance, with early stopping enabled to prevent overfitting."
+    }
+  ]
+}

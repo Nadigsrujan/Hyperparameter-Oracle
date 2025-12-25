@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "experiment_id": "20251224_203634",
+    "start_time": "2025-12-24T20:36:34.700578",
+    "dataset_info": {
+      "name": "iris",
+      "samples": 150,
+      "features": 4,
+      "classes": 3
+    },
+    "best_config": {
+      "iteration": 3,
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 500,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration increases the complexity of the model by adding an additional hidden layer with 50 neurons, which could help capture more intricate patterns in the iris dataset. The learning rate is kept at 0.01 to maintain a balance between convergence speed and stability. The batch size is set to 32, which is effective for the dataset size. Early stopping is still enabled to prevent overfitting."
+      },
+      "score": 0.9666666666666667
+    },
+    "best_score": 0.9666666666666667,
+    "end_time": "2025-12-24T20:37:11.056551",
+    "total_configurations": 5
+  },
+  "configurations": [
+    {
+      "iteration": 1,
+      "timestamp": "2025-12-24T20:36:42.912687",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 300,
+        "hidden_layer_sizes": [
+          100
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "The iris dataset is small with 150 samples, making MLP suitable for capturing complex patterns. A learning rate of 0.001 and a batch size of 32 balance convergence speed and stability. Using a single hidden layer with 100 neurons and ReLU activation optimizes performance while avoiding overfitting. Early stopping helps prevent overfitting in this small dataset."
+      },
+      "score": 0.8666666666666667,
+      "duration": 0.12442207336425781,
+      "reasoning": "The iris dataset is small with 150 samples, making MLP suitable for capturing complex patterns. A learning rate of 0.001 and a batch size of 32 balance convergence speed and stability. Using a single hidden layer with 100 neurons and ReLU activation optimizes performance while avoiding overfitting. Early stopping helps prevent overfitting in this small dataset."
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2025-12-24T20:36:49.735799",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 400,
+        "hidden_layer_sizes": [
+          50,
+          50
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration explores a different optimizer (sgd) with momentum for potential performance gains. The learning rate of 0.01 and a batch size of 64 allow for efficient training. Two hidden layers with 50 neurons each and tanh activation introduce more complexity while still managing overfitting with early stopping. Minmax scaling is chosen to normalize the input features, which could enhance convergence."
+      },
+      "score": 0.8666666666666667,
+      "duration": 0.11812782287597656,
+      "reasoning": "This configuration explores a different optimizer (sgd) with momentum for potential performance gains. The learning rate of 0.01 and a batch size of 64 allow for efficient training. Two hidden layers with 50 neurons each and tanh activation introduce more complexity while still managing overfitting with early stopping. Minmax scaling is chosen to normalize the input features, which could enhance convergence."
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2025-12-24T20:36:55.272422",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 500,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration increases the complexity of the model by adding an additional hidden layer with 50 neurons, which could help capture more intricate patterns in the iris dataset. The learning rate is kept at 0.01 to maintain a balance between convergence speed and stability. The batch size is set to 32, which is effective for the dataset size. Early stopping is still enabled to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.7646706104278564,
+      "reasoning": "This configuration increases the complexity of the model by adding an additional hidden layer with 50 neurons, which could help capture more intricate patterns in the iris dataset. The learning rate is kept at 0.01 to maintain a balance between convergence speed and stability. The batch size is set to 32, which is effective for the dataset size. Early stopping is still enabled to prevent overfitting."
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2025-12-24T20:37:00.901853",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration slightly reduces the learning rate to 0.005 to explore a more gradual convergence while maintaining the effective batch size of 64. The hidden layer architecture is adjusted to include a smaller layer with 25 neurons, allowing for testing different complexity levels. The max_iter is increased to 600 to give the model more training time, and early stopping is still enabled to prevent overfitting."
+      },
+      "score": 0.8666666666666667,
+      "duration": 0.07746124267578125,
+      "reasoning": "This configuration slightly reduces the learning rate to 0.005 to explore a more gradual convergence while maintaining the effective batch size of 64. The hidden layer architecture is adjusted to include a smaller layer with 25 neurons, allowing for testing different complexity levels. The max_iter is increased to 600 to give the model more training time, and early stopping is still enabled to prevent overfitting."
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2025-12-24T20:37:05.956957",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 32,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains the successful hidden layer architecture while exploring the SGD optimizer with momentum for potential performance gains. The learning rate is kept at 0.01 to balance convergence speed and stability. Increasing max_iter to 600 allows for more training time, and early stopping is still enabled to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.08054733276367188,
+      "reasoning": "This configuration maintains the successful hidden layer architecture while exploring the SGD optimizer with momentum for potential performance gains. The learning rate is kept at 0.01 to balance convergence speed and stability. Increasing max_iter to 600 allows for more training time, and early stopping is still enabled to prevent overfitting."
+    }
+  ]
+}

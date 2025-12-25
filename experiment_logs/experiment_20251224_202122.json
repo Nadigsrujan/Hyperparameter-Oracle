@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "experiment_id": "20251224_202122",
+    "start_time": "2025-12-24T20:21:22.319253",
+    "dataset_info": {
+      "name": "iris",
+      "samples": 150,
+      "features": 4,
+      "classes": 3
+    },
+    "best_config": {
+      "iteration": 3,
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 700,
+        "hidden_layer_sizes": [
+          100,
+          100
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration uses a deeper MLP architecture with two hidden layers of 100 neurons each to capture more complex patterns. The learning rate is maintained at 0.01 while increasing the max_iter to 700 to allow more epochs for convergence. The use of 'adam' optimizer is retained for its efficiency in training. Early stopping is kept to prevent overfitting, along with standard scaling and balanced class weights to handle the class distribution effectively."
+      },
+      "score": 1.0
+    },
+    "best_score": 1.0,
+    "end_time": "2025-12-24T20:21:55.722467",
+    "total_configurations": 5
+  },
+  "configurations": [
+    {
+      "iteration": 1,
+      "timestamp": "2025-12-24T20:21:28.281554",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 500,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "The iris dataset is small and has a low number of features; using an MLP with a moderate learning rate, standard scaling, and early stopping helps to optimize training without overfitting. The architecture with two hidden layers allows capturing complex patterns while remaining computationally efficient."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.1764085292816162,
+      "reasoning": "The iris dataset is small and has a low number of features; using an MLP with a moderate learning rate, standard scaling, and early stopping helps to optimize training without overfitting. The architecture with two hidden layers allows capturing complex patterns while remaining computationally efficient."
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2025-12-24T20:21:35.240657",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration explores a different optimizer (sgd) with a higher batch size to improve generalization and training speed. The learning rate is slightly increased to encourage faster convergence, while the momentum is set to 0.9 to help navigate through the loss landscape. The choice of 'tanh' activation introduces non-linearity, and the adjusted alpha value adds a bit of regularization to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.11006665229797363,
+      "reasoning": "This configuration explores a different optimizer (sgd) with a higher batch size to improve generalization and training speed. The learning rate is slightly increased to encourage faster convergence, while the momentum is set to 0.9 to help navigate through the loss landscape. The choice of 'tanh' activation introduces non-linearity, and the adjusted alpha value adds a bit of regularization to prevent overfitting."
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2025-12-24T20:21:40.595239",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 700,
+        "hidden_layer_sizes": [
+          100,
+          100
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.01,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration uses a deeper MLP architecture with two hidden layers of 100 neurons each to capture more complex patterns. The learning rate is maintained at 0.01 while increasing the max_iter to 700 to allow more epochs for convergence. The use of 'adam' optimizer is retained for its efficiency in training. Early stopping is kept to prevent overfitting, along with standard scaling and balanced class weights to handle the class distribution effectively."
+      },
+      "score": 1.0,
+      "duration": 0.300823450088501,
+      "reasoning": "This configuration uses a deeper MLP architecture with two hidden layers of 100 neurons each to capture more complex patterns. The learning rate is maintained at 0.01 while increasing the max_iter to 700 to allow more epochs for convergence. The use of 'adam' optimizer is retained for its efficiency in training. Early stopping is kept to prevent overfitting, along with standard scaling and balanced class weights to handle the class distribution effectively."
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2025-12-24T20:21:45.998578",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 32,
+        "optimizer": "sgd",
+        "momentum": 0.8,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration explores a different learning rate and momentum for the SGD optimizer, aiming to enhance convergence speed while maintaining stability. The architecture is adjusted to include an additional hidden layer to capture more complex patterns, with 'tanh' activation to introduce non-linearity. The max_iter is set to 800 to allow further training, while early stopping is retained to combat overfitting. The alpha value is slightly reduced to prevent over-regularization."
+      },
+      "score": 0.9333333333333333,
+      "duration": 0.1599254608154297,
+      "reasoning": "This configuration explores a different learning rate and momentum for the SGD optimizer, aiming to enhance convergence speed while maintaining stability. The architecture is adjusted to include an additional hidden layer to capture more complex patterns, with 'tanh' activation to introduce non-linearity. The max_iter is set to 800 to allow further training, while early stopping is retained to combat overfitting. The alpha value is slightly reduced to prevent over-regularization."
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2025-12-24T20:21:49.806571",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration tests a slightly lower learning rate and a higher batch size to explore the trade-off between training speed and convergence stability. The architecture maintains complexity with three hidden layers to capture intricate patterns, while early stopping and standard scaling are retained to manage overfitting and class distribution effectively."
+      },
+      "score": 1.0,
+      "duration": 0.13843059539794922,
+      "reasoning": "This configuration tests a slightly lower learning rate and a higher batch size to explore the trade-off between training speed and convergence stability. The architecture maintains complexity with three hidden layers to capture intricate patterns, while early stopping and standard scaling are retained to manage overfitting and class distribution effectively."
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "metadata": {
+    "experiment_id": "20251224_202639",
+    "start_time": "2025-12-24T20:26:39.701913",
+    "dataset_info": {
+      "name": "iris",
+      "samples": 150,
+      "features": 4,
+      "classes": 3
+    },
+    "best_config": {
+      "iteration": 3,
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.0005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration explores a slightly higher learning rate of 0.005 to potentially speed up convergence while maintaining stability with the 'adam' optimizer. The batch size is increased to 64 to improve GPU utilization. The hidden layer structure is maintained with two layers to balance capacity and performance. A small regularization alpha of 0.0005 is used for better generalization, and early stopping is retained to prevent overfitting."
+      },
+      "score": 1.0
+    },
+    "best_score": 1.0,
+    "end_time": "2025-12-24T20:27:14.867504",
+    "total_configurations": 5
+  },
+  "configurations": [
+    {
+      "iteration": 1,
+      "timestamp": "2025-12-24T20:26:45.459950",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.001,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 500,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.0001,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "The iris dataset has a small number of samples and features, making an MLP with two hidden layers suitable. A learning rate of 0.001 with 'adam' optimizer balances training speed and convergence. Batch size 32 is a good trade-off for small datasets. Early stopping ensures we avoid overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.13474512100219727,
+      "reasoning": "The iris dataset has a small number of samples and features, making an MLP with two hidden layers suitable. A learning rate of 0.001 with 'adam' optimizer balances training speed and convergence. Batch size 32 is a good trade-off for small datasets. Early stopping ensures we avoid overfitting."
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2025-12-24T20:26:51.141144",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 64,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.001,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "minmax",
+        "class_weight": "balanced",
+        "reasoning": "This configuration explores a different optimizer (sgd) with momentum to potentially improve convergence speed. The learning rate is set to 0.01 for faster learning, and the batch size is increased to 64 to better utilize GPU resources. The hidden layers are expanded to three for increased capacity, and 'tanh' is chosen for its performance with deeper networks. Regularization with alpha set to 0.001 offers a balance between fitting and generalization."
+      },
+      "score": 0.9333333333333333,
+      "duration": 0.14627981185913086,
+      "reasoning": "This configuration explores a different optimizer (sgd) with momentum to potentially improve convergence speed. The learning rate is set to 0.01 for faster learning, and the batch size is increased to 64 to better utilize GPU resources. The hidden layers are expanded to three for increased capacity, and 'tanh' is chosen for its performance with deeper networks. Regularization with alpha set to 0.001 offers a balance between fitting and generalization."
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2025-12-24T20:26:57.998186",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.005,
+        "batch_size": 64,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 600,
+        "hidden_layer_sizes": [
+          100,
+          50,
+          25
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.0005,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration explores a slightly higher learning rate of 0.005 to potentially speed up convergence while maintaining stability with the 'adam' optimizer. The batch size is increased to 64 to improve GPU utilization. The hidden layer structure is maintained with two layers to balance capacity and performance. A small regularization alpha of 0.0005 is used for better generalization, and early stopping is retained to prevent overfitting."
+      },
+      "score": 1.0,
+      "duration": 0.17991852760314941,
+      "reasoning": "This configuration explores a slightly higher learning rate of 0.005 to potentially speed up convergence while maintaining stability with the 'adam' optimizer. The batch size is increased to 64 to improve GPU utilization. The hidden layer structure is maintained with two layers to balance capacity and performance. A small regularization alpha of 0.0005 is used for better generalization, and early stopping is retained to prevent overfitting."
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2025-12-24T20:27:03.082482",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "momentum": 0.0,
+        "max_iter": 700,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "relu",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.0001,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration tests a slightly higher learning rate of 0.01 to improve convergence speed, while reducing the batch size to 32 for better generalization with a smaller dataset. The model maintains two hidden layers for capacity, and uses 'relu' activation which has performed well in previous configurations. The max_iter is set to 700 to allow for adequate training iterations, with early stopping to prevent overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.06889986991882324,
+      "reasoning": "This configuration tests a slightly higher learning rate of 0.01 to improve convergence speed, while reducing the batch size to 32 for better generalization with a smaller dataset. The model maintains two hidden layers for capacity, and uses 'relu' activation which has performed well in previous configurations. The max_iter is set to 700 to allow for adequate training iterations, with early stopping to prevent overfitting."
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2025-12-24T20:27:09.069820",
+      "params": {
+        "model_type": "mlp",
+        "learning_rate_init": 0.01,
+        "batch_size": 32,
+        "optimizer": "sgd",
+        "momentum": 0.9,
+        "max_iter": 800,
+        "hidden_layer_sizes": [
+          100,
+          50
+        ],
+        "activation": "tanh",
+        "n_estimators": 0,
+        "max_depth": null,
+        "min_samples_split": 0,
+        "alpha": 0.001,
+        "early_stopping": true,
+        "criterion": "gini",
+        "scaling": "standard",
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to explore the sgd optimizer with momentum for potentially improved convergence speed and performance. A learning rate of 0.01 is maintained to balance speed and stability. The batch size is set to 32 to allow for better generalization, while the hidden layer sizes remain at two layers for capacity. The activation function is changed to 'tanh' to evaluate its performance against the 'relu' used previously. Regularization with alpha set to 0.001 is included to enhance generalization, with early stopping to mitigate overfitting."
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.06940937042236328,
+      "reasoning": "This configuration aims to explore the sgd optimizer with momentum for potentially improved convergence speed and performance. A learning rate of 0.01 is maintained to balance speed and stability. The batch size is set to 32 to allow for better generalization, while the hidden layer sizes remain at two layers for capacity. The activation function is changed to 'tanh' to evaluate its performance against the 'relu' used previously. Regularization with alpha set to 0.001 is included to enhance generalization, with early stopping to mitigate overfitting."
+    }
+  ]
+}
