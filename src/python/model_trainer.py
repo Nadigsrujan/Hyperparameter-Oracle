@@ -165,6 +165,12 @@ class ModelTrainer:
                     except:
                         bs = 'auto'
                 
+                # Clip batch_size to sample size to avoid UserWarning
+                num_samples = X_train.shape[0]
+                if bs != 'auto':
+                    bs = min(int(bs), num_samples)
+                    if bs < 1: bs = 1
+
                 model = MLPClassifier(
                     hidden_layer_sizes=tuple(layers),
                     activation=params.get('activation', 'relu'),
@@ -172,7 +178,7 @@ class ModelTrainer:
                     alpha=float(params.get('alpha', 0.0001)),
                     batch_size=bs,
                     learning_rate_init=float(params.get('learning_rate_init', 0.001)),
-                    max_iter=int(params.get('max_iter', 200)),
+                    max_iter=int(params.get('max_iter', 500)), # Increased from 200
                     momentum=float(params.get('momentum', 0.9)),
                     early_stopping=bool(params.get('early_stopping', False)),
                     random_state=42

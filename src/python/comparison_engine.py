@@ -45,7 +45,7 @@ class ComparisonEngine:
         # Initial exploration
         current_params = {
             'model_type': 'mlp', 'learning_rate_init': 0.001, 'batch_size': 32,
-            'optimizer': 'adam', 'momentum': 0.9, 'max_iter': 100, 
+            'optimizer': 'adam', 'momentum': 0.9, 'max_iter': 500, 
             'hidden_layer_sizes': [50], 'activation': 'relu', 'alpha': 0.0001
         }
         
@@ -101,7 +101,8 @@ class ComparisonEngine:
                 'max_iter': 200,
                 'hidden_layer_sizes': random.choice([[50], [100], [50,50]]),
                 'activation': 'relu',
-                'alpha': 10 ** random.uniform(-4, -2)
+                'alpha': 10 ** random.uniform(-4, -2),
+                'max_iter': 500
             }
         
         results['total_time'] = time.time() - start_time
@@ -123,7 +124,7 @@ class ComparisonEngine:
                 'optimizer': 'adam',
                 'hidden_layer_sizes': [100],
                 'activation': 'relu',
-                'max_iter': 200
+                'max_iter': 500
             }
             acc, duration, _ = self.trainer.evaluate(params)
             
@@ -148,11 +149,9 @@ class ComparisonEngine:
         count = 0
         for lr in lrs:
             for size in sizes:
-                if count >= self.max_iterations: break
-                
                 params = {
                     'model_type': 'mlp', 'learning_rate_init': lr, 'hidden_layer_sizes': size,
-                    'batch_size': 32, 'optimizer': 'adam', 'activation': 'relu', 'max_iter': 200
+                    'batch_size': 32, 'optimizer': 'adam', 'activation': 'relu', 'max_iter': 500
                 }
                 
                 iter_start = time.time()

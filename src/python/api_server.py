@@ -517,7 +517,6 @@ def run_optimization_loop():
             oracle_state['best_score'] = acc
             oracle_state['best_config'] = real_params
         
-        # Get next suggestion
         if use_ai:
             # Let AI decide next configuration based on history
             current_params = ai_assistant.get_hyperparameter_suggestions(
@@ -527,7 +526,67 @@ def run_optimization_loop():
             reasoning = current_params.get('reasoning', 'AI suggestion')
         else:
             # Legacy DSA-based suggestion
-            current_params = oracle.get_next_suggestion(2)
+            # 1. Get raw float parameters from C Oracle
+            raw_params = oracle.get_next_suggestion(40)
+            
+            # 2. Denormalize validation to dictionary
+            def denormalize_params(arr):
+                p = {}
+                
+                # Model Type
+                if arr[0] < 0.5:
+                    p['model_type'] = 'mlp'
+                    
+                    # MLP Params
+                    # Learning Rate: 0-1 -> 1e-4 to 1e-1
+                    p['learning_rate_init'] = float(10 ** (3 * arr[1] - 4))
+                    
+                    # Batch Size: 0-1 -> 16 to 256
+                    p['batch_size'] = int(arr[2] * 240 + 16)
+                    
+                    # Optimizer
+                    if arr[3] < 0.33: p['optimizer'] = 'adam'
+                    elif arr[3] < 0.66: p['optimizer'] = 'sgd'
+                    else: p['optimizer'] = 'lbfgs'
+                    
+                    # Momentum
+                    p['momentum'] = float(arr[4])
+                    
+                    # Layers
+                    n_neurons = int(arr[5] * 500) + 10
+                    p['hidden_layer_sizes'] = [n_neurons]
+                    
+                    # Activation
+                    if arr[6] < 0.33: p['activation'] = 'relu'
+                    elif arr[6] < 0.66: p['activation'] = 'tanh'
+                    else: p['activation'] = 'logistic'
+                    
+                    # Alpha
+                    p['alpha'] = float(10 ** (3 * arr[7] - 4))
+                    
+                    # Early Stopping
+                    p['early_stopping'] = bool(arr[8] > 0.5)
+                    
+                else:
+                    p['model_type'] = 'rf'
+                    
+                    # RF Params
+                    p['n_estimators'] = int(arr[20] * 450 + 50)
+                    p['max_depth'] = int(arr[21] * 27 + 3)
+                    p['min_samples_split'] = int(arr[22] * 18 + 2)
+                    p['criterion'] = 'entropy' if arr[23] > 0.5 else 'gini'
+                
+                # Shared Params
+                if arr[30] < 0.33: p['scaling'] = 'none'
+                elif arr[30] < 0.66: p['scaling'] = 'standard'
+                else: p['scaling'] = 'minmax'
+                
+                p['class_weight'] = 'balanced' if arr[31] > 0.5 else None
+                
+                return p
+
+            current_params = denormalize_params(raw_params)
+            reasoning = 'DSA Probabilistic Suggestion'
         
         # Small delay to prevent overwhelming the system
         time.sleep(0.1)

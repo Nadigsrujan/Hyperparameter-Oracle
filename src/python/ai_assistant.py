@@ -141,9 +141,9 @@ Respond with JSON in this exact format:
     "criterion": "gini" or "entropy",
     "scaling": "standard" or "minmax" or "none",
     "class_weight": "balanced" or null,
-    "reasoning": "<brief explanation>"
+    "reasoning": "A concise set of 3-4 lines explaining the technical changes. Explicitly describe the logical progression from the first iteration to this one (e.g., 'Since iteration 1, we narrowed down the hidden layers to [100,50]. Now, we are increasing the learning rate slightly to overcome the stall observed in the last 2 rounds')."
 }
-IMPORTANT: Provide values for ALL keys, even if not relevant for the selected model_type (use defaults like 0 or null).
+IMPORTANT: Provide values for ALL keys. Keep reasoning concise, technical, and explain the progression from the start. (max 50 words).
 """
         return context
     

@@ -4,7 +4,7 @@
  */
 
 // API Configuration
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'http://127.0.0.1:5000/api';
 
 // Application State
 const state = {
@@ -356,7 +356,7 @@ async function runComparison() {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                iterations: 30,
+                iterations: parseInt(elements.iterationsInput.value),
                 dataset: elements.datasetSelect.value
             })
         });
@@ -688,6 +688,10 @@ function updateHyperparamsTable(history) {
         let param2 = type === 'mlp' ? (p.batch_size || '-') : (p.max_depth || '-');
         let param3 = type === 'mlp' ? (Array.isArray(p.hidden_layer_sizes) ? `[${p.hidden_layer_sizes}]` : '-') : (p.min_samples_split || '-');
 
+        let reasoningText = entry.reasoning || '-';
+        // Clean up text if old format still exists
+        reasoningText = reasoningText.replace(/\[Rationale\]:\s*/i, '').replace(/\[Changes\]:\s*/i, ' | ');
+
         row.innerHTML = `
             <td class="iteration-col">${entry.iteration}</td>
             <td class="score-col">${entry.accuracy.toFixed(4)}</td>
@@ -695,7 +699,7 @@ function updateHyperparamsTable(history) {
             <td>${param1}</td>
             <td>${param2}</td>
             <td>${param3}</td>
-            <td style="max-width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${entry.reasoning || 'No AI reasoning'}">${entry.reasoning || '-'}</td>
+            <td style="white-space: normal; word-wrap: break-word; font-size: 0.9em; line-height: 1.4; padding: 8px;">${reasoningText}</td>
         `;
 
         tbody.appendChild(row);
