@@ -1,0 +1,479 @@
+{
+  "metadata": {
+    "experiment_id": "20251230_201723",
+    "start_time": "2025-12-30T20:17:23.682207",
+    "dataset_info": {
+      "name": "iris",
+      "samples": 150,
+      "features": 4,
+      "classes": 3
+    },
+    "best_config": {
+      "iteration": 1,
+      "params": {
+        "C": 21.423179449977553,
+        "gamma": 0.6303302631713548,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0
+    },
+    "best_score": 1.0,
+    "end_time": "2025-12-30T20:17:29.611251",
+    "total_configurations": 30
+  },
+  "configurations": [
+    {
+      "iteration": 1,
+      "timestamp": "2025-12-30T20:17:26.402340",
+      "params": {
+        "C": 21.423179449977553,
+        "gamma": 0.6303302631713548,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.004678249359130859,
+      "reasoning": null
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2025-12-30T20:17:26.509594",
+      "params": {
+        "C": 36.7633,
+        "gamma": 0.829171,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0020210742950439453,
+      "reasoning": null
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2025-12-30T20:17:26.616183",
+      "params": {
+        "C": 11.63297944997755,
+        "gamma": 0.6792812631713548,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0027701854705810547,
+      "reasoning": null
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2025-12-30T20:17:26.722999",
+      "params": {
+        "C": 30.07,
+        "gamma": 0.817183,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0031991004943847656,
+      "reasoning": null
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2025-12-30T20:17:26.829737",
+      "params": {
+        "C": 23.976100000000002,
+        "gamma": 0.837163,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0025069713592529297,
+      "reasoning": null
+    },
+    {
+      "iteration": 6,
+      "timestamp": "2025-12-30T20:17:26.937496",
+      "params": {
+        "C": 9.13547944997755,
+        "gamma": 0.6443162631713548,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0015501976013183594,
+      "reasoning": null
+    },
+    {
+      "iteration": 7,
+      "timestamp": "2025-12-30T20:17:27.045137",
+      "params": {
+        "C": 26.973100000000006,
+        "gamma": 0.746254,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.002454996109008789,
+      "reasoning": null
+    },
+    {
+      "iteration": 8,
+      "timestamp": "2025-12-30T20:17:27.154221",
+      "params": {
+        "C": 18.426179449977553,
+        "gamma": 0.7412192631713548,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0038309097290039062,
+      "reasoning": null
+    },
+    {
+      "iteration": 9,
+      "timestamp": "2025-12-30T20:17:27.261684",
+      "params": {
+        "C": 17.682400000000005,
+        "gamma": 0.7512490000000001,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0022110939025878906,
+      "reasoning": null
+    },
+    {
+      "iteration": 10,
+      "timestamp": "2025-12-30T20:17:27.369458",
+      "params": {
+        "C": 18.32627944997755,
+        "gamma": 0.7921682631713548,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0024781227111816406,
+      "reasoning": null
+    },
+    {
+      "iteration": 11,
+      "timestamp": "2025-12-30T20:17:27.476766",
+      "params": {
+        "C": 36.064,
+        "gamma": 0.897103,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0021381378173828125,
+      "reasoning": null
+    },
+    {
+      "iteration": 12,
+      "timestamp": "2025-12-30T20:17:27.581967",
+      "params": {
+        "C": 28.416179449977555,
+        "gamma": 0.5504102631713549,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0025789737701416016,
+      "reasoning": null
+    },
+    {
+      "iteration": 13,
+      "timestamp": "2025-12-30T20:17:27.690353",
+      "params": {
+        "C": 10.389700000000003,
+        "gamma": 0.804196,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0030858516693115234,
+      "reasoning": null
+    },
+    {
+      "iteration": 14,
+      "timestamp": "2025-12-30T20:17:27.794784",
+      "params": {
+        "C": 33.610979449977556,
+        "gamma": 0.5903702631713549,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0021200180053710938,
+      "reasoning": null
+    },
+    {
+      "iteration": 15,
+      "timestamp": "2025-12-30T20:17:27.902431",
+      "params": {
+        "C": 19.580500000000004,
+        "gamma": 0.889111,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.002412080764770508,
+      "reasoning": null
+    },
+    {
+      "iteration": 16,
+      "timestamp": "2025-12-30T20:17:28.008815",
+      "params": {
+        "C": 27.11747944997755,
+        "gamma": 0.4924682631713549,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.001325845718383789,
+      "reasoning": null
+    },
+    {
+      "iteration": 17,
+      "timestamp": "2025-12-30T20:17:28.115131",
+      "params": {
+        "C": 14.285800000000002,
+        "gamma": 0.841159,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0012030601501464844,
+      "reasoning": null
+    },
+    {
+      "iteration": 18,
+      "timestamp": "2025-12-30T20:17:28.220559",
+      "params": {
+        "C": 22.92167944997755,
+        "gamma": 0.4984622631713549,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0009076595306396484,
+      "reasoning": null
+    },
+    {
+      "iteration": 19,
+      "timestamp": "2025-12-30T20:17:28.327116",
+      "params": {
+        "C": 15.284800000000002,
+        "gamma": 0.744256,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0014379024505615234,
+      "reasoning": null
+    },
+    {
+      "iteration": 20,
+      "timestamp": "2025-12-30T20:17:28.435678",
+      "params": {
+        "C": 9.890200000000004,
+        "gamma": 0.728272,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.003342151641845703,
+      "reasoning": null
+    },
+    {
+      "iteration": 21,
+      "timestamp": "2025-12-30T20:17:28.544175",
+      "params": {
+        "C": 28.016579449977552,
+        "gamma": 0.4445162631713549,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0023207664489746094,
+      "reasoning": null
+    },
+    {
+      "iteration": 22,
+      "timestamp": "2025-12-30T20:17:28.648364",
+      "params": {
+        "C": 16.283800000000003,
+        "gamma": 0.582418,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0027430057525634766,
+      "reasoning": null
+    },
+    {
+      "iteration": 23,
+      "timestamp": "2025-12-30T20:17:28.755030",
+      "params": {
+        "C": 0.8992000000000036,
+        "gamma": 0.7942060000000001,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0014247894287109375,
+      "reasoning": null
+    },
+    {
+      "iteration": 24,
+      "timestamp": "2025-12-30T20:17:28.861225",
+      "params": {
+        "C": 35.00957944997755,
+        "gamma": 0.39356726317135493,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.002753734588623047,
+      "reasoning": null
+    },
+    {
+      "iteration": 25,
+      "timestamp": "2025-12-30T20:17:28.968559",
+      "params": {
+        "C": 15.3847,
+        "gamma": 0.636364,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0025947093963623047,
+      "reasoning": null
+    },
+    {
+      "iteration": 26,
+      "timestamp": "2025-12-30T20:17:29.076644",
+      "params": {
+        "C": 0.1,
+        "gamma": 0.8131870000000001,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0015480518341064453,
+      "reasoning": null
+    },
+    {
+      "iteration": 27,
+      "timestamp": "2025-12-30T20:17:29.184365",
+      "params": {
+        "C": 36.40817944997755,
+        "gamma": 0.4914692631713549,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0024597644805908203,
+      "reasoning": null
+    },
+    {
+      "iteration": 28,
+      "timestamp": "2025-12-30T20:17:29.290775",
+      "params": {
+        "C": 27.017579449977557,
+        "gamma": 0.6263342631713549,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0033462047576904297,
+      "reasoning": null
+    },
+    {
+      "iteration": 29,
+      "timestamp": "2025-12-30T20:17:29.395160",
+      "params": {
+        "C": 69.9301,
+        "gamma": 0.021979000000000002,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0033211708068847656,
+      "reasoning": null
+    },
+    {
+      "iteration": 30,
+      "timestamp": "2025-12-30T20:17:29.504053",
+      "params": {
+        "C": 4.8952,
+        "gamma": 0.8671330000000002,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.0,
+        "shrinking": true
+      },
+      "score": 1.0,
+      "duration": 0.0036268234252929688,
+      "reasoning": null
+    }
+  ]
+}

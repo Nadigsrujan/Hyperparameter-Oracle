@@ -21,14 +21,15 @@ def _load_dll():
     if _oracle_lib is not None:
         return _oracle_lib
     
-    dll_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../build/oracle.dll"))
+    extension = ".dll" if sys.platform == "win32" else ".so"
+    dll_path = os.path.abspath(os.path.join(os.path.dirname(__file__), f"../../build/oracle{extension}"))
     if not os.path.exists(dll_path):
-        raise FileNotFoundError(f"DLL not found at {dll_path}")
+        raise FileNotFoundError(f"DLL/SO not found at {dll_path}")
     
     try:
         _oracle_lib = ctypes.CDLL(dll_path)
     except OSError as e:
-        raise OSError(f"Error loading DLL: {e}")
+        raise OSError(f"Error loading library: {e}")
     
     # Define Argument Types
     _oracle_lib.oracle_init.argtypes = []

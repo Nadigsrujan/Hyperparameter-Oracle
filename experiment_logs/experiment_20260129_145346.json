@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "experiment_id": "20260129_145346",
+    "start_time": "2026-01-29T14:53:46.614815",
+    "dataset_info": {
+      "name": "wine",
+      "samples": 178,
+      "features": 13,
+      "classes": 3
+    },
+    "best_config": null,
+    "best_score": 0.0
+  },
+  "configurations": []
+}

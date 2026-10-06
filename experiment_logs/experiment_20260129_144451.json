@@ -1,0 +1,286 @@
+{
+  "metadata": {
+    "experiment_id": "20260129_144451",
+    "start_time": "2026-01-29T14:44:51.418720",
+    "dataset_info": {
+      "name": "wine",
+      "samples": 178,
+      "features": 13,
+      "classes": 3
+    },
+    "best_config": {
+      "iteration": 1,
+      "params": {
+        "C": 15.649968069892235,
+        "gamma": 0.0030722414785169672,
+        "kernel": "poly",
+        "degree": 2,
+        "coef0": 0.9710378114769476,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Random exploration (AI assistant not available)"
+      },
+      "score": 1.0
+    },
+    "best_score": 1.0,
+    "end_time": "2026-01-29T14:45:45.879450",
+    "total_configurations": 15
+  },
+  "configurations": [
+    {
+      "iteration": 1,
+      "timestamp": "2026-01-29T14:44:56.939441",
+      "params": {
+        "C": 15.649968069892235,
+        "gamma": 0.0030722414785169672,
+        "kernel": "poly",
+        "degree": 2,
+        "coef0": 0.9710378114769476,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Random exploration (AI assistant not available)"
+      },
+      "score": 1.0,
+      "duration": 0.10779762268066406,
+      "reasoning": "Random exploration (AI assistant not available)"
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2026-01-29T14:45:00.112032",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.005,
+        "kernel": "rbf",
+        "degree": 2,
+        "coef0": 0.5,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Increasing C to 20.0 to further exploit the successful region while trying an rbf kernel for better performance on small datasets. Gamma is slightly increased to enhance flexibility. Coef0 is adjusted to explore interaction terms."
+      },
+      "score": 0.6944444444444444,
+      "duration": 0.0021791458129882812,
+      "reasoning": "Increasing C to 20.0 to further exploit the successful region while trying an rbf kernel for better performance on small datasets. Gamma is slightly increased to enhance flexibility. Coef0 is adjusted to explore interaction terms."
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2026-01-29T14:45:03.977214",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.01,
+        "kernel": "linear",
+        "degree": 3,
+        "coef0": 0.5,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Increasing C to maintain high accuracy while switching to a linear kernel to test its effectiveness on this dataset. Gamma is set to a moderate value to ensure flexibility without overfitting. Degree and coef0 are set to default values to explore the potential of linear interactions."
+      },
+      "score": 1.0,
+      "duration": 0.12218093872070312,
+      "reasoning": "Increasing C to maintain high accuracy while switching to a linear kernel to test its effectiveness on this dataset. Gamma is set to a moderate value to ensure flexibility without overfitting. Degree and coef0 are set to default values to explore the potential of linear interactions."
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2026-01-29T14:45:06.872630",
+      "params": {
+        "C": 30.0,
+        "gamma": 0.01,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.5,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Increasing C to 30.0 to further enhance model complexity and leverage previous successes. Using rbf kernel to capture non-linear relationships, while setting gamma to a moderate value for flexibility. Degree and coef0 are kept simple to allow exploration of interactions without over-complicating the model."
+      },
+      "score": 0.6666666666666666,
+      "duration": 0.004956960678100586,
+      "reasoning": "Increasing C to 30.0 to further enhance model complexity and leverage previous successes. Using rbf kernel to capture non-linear relationships, while setting gamma to a moderate value for flexibility. Degree and coef0 are kept simple to allow exploration of interactions without over-complicating the model."
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2026-01-29T14:45:10.425001",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.005,
+        "kernel": "poly",
+        "degree": 3,
+        "coef0": 0.6,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Using a slightly higher C to leverage previous successful configurations while exploring the poly kernel with a higher degree to capture more complex relationships. Gamma is kept moderate for flexibility, coef0 is adjusted to explore interaction terms, and shrinking is set to true to improve optimization speed."
+      },
+      "score": 1.0,
+      "duration": 0.08074402809143066,
+      "reasoning": "Using a slightly higher C to leverage previous successful configurations while exploring the poly kernel with a higher degree to capture more complex relationships. Gamma is kept moderate for flexibility, coef0 is adjusted to explore interaction terms, and shrinking is set to true to improve optimization speed."
+    },
+    {
+      "iteration": 6,
+      "timestamp": "2026-01-29T14:45:13.342016",
+      "params": {
+        "C": 25.0,
+        "gamma": 0.01,
+        "kernel": "linear",
+        "degree": 3,
+        "coef0": 0.5,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Increasing C to further explore the successful region while maintaining the linear kernel, which has shown effectiveness. Gamma is set to a moderate value for flexibility. Degree and coef0 are kept simple to ensure the model remains interpretable and efficient."
+      },
+      "score": 1.0,
+      "duration": 0.12807226181030273,
+      "reasoning": "Increasing C to further explore the successful region while maintaining the linear kernel, which has shown effectiveness. Gamma is set to a moderate value for flexibility. Degree and coef0 are kept simple to ensure the model remains interpretable and efficient."
+    },
+    {
+      "iteration": 7,
+      "timestamp": "2026-01-29T14:45:18.352966",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.01,
+        "kernel": "rbf",
+        "degree": 2,
+        "coef0": 0.5,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Using C of 20.0 to maintain model complexity while leveraging successful configurations. The rbf kernel is chosen for its effectiveness on non-linear relationships, and gamma is set to a moderate value for flexibility. Degree and coef0 are set to explore simple interactions, and shrinking is enabled for faster convergence."
+      },
+      "score": 0.6666666666666666,
+      "duration": 0.0023429393768310547,
+      "reasoning": "Using C of 20.0 to maintain model complexity while leveraging successful configurations. The rbf kernel is chosen for its effectiveness on non-linear relationships, and gamma is set to a moderate value for flexibility. Degree and coef0 are set to explore simple interactions, and shrinking is enabled for faster convergence."
+    },
+    {
+      "iteration": 8,
+      "timestamp": "2026-01-29T14:45:21.719456",
+      "params": {
+        "C": 30.0,
+        "gamma": 0.005,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.4,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Given the dataset size and previous successes with C values around 20-30, this configuration aims to leverage the rbf kernel for potential non-linear relationships while maintaining a moderate gamma for flexibility. Degree is set to 3 to capture some complexity, and coef0 is slightly reduced to explore different interaction effects. Shrinking is kept enabled for optimization speed."
+      },
+      "score": 0.6944444444444444,
+      "duration": 0.0051691532135009766,
+      "reasoning": "Given the dataset size and previous successes with C values around 20-30, this configuration aims to leverage the rbf kernel for potential non-linear relationships while maintaining a moderate gamma for flexibility. Degree is set to 3 to capture some complexity, and coef0 is slightly reduced to explore different interaction effects. Shrinking is kept enabled for optimization speed."
+    },
+    {
+      "iteration": 9,
+      "timestamp": "2026-01-29T14:45:26.851239",
+      "params": {
+        "C": 35.0,
+        "gamma": 0.01,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.5,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Given the dataset's small size, a higher C value is selected to increase model complexity. The rbf kernel is retained for its effectiveness in capturing non-linear relationships, while gamma is maintained at a moderate level for flexibility. Degree and coef0 are set to moderate values to balance complexity and interpretability, and shrinking is enabled for faster convergence."
+      },
+      "score": 0.6666666666666666,
+      "duration": 0.0019807815551757812,
+      "reasoning": "Given the dataset's small size, a higher C value is selected to increase model complexity. The rbf kernel is retained for its effectiveness in capturing non-linear relationships, while gamma is maintained at a moderate level for flexibility. Degree and coef0 are set to moderate values to balance complexity and interpretability, and shrinking is enabled for faster convergence."
+    },
+    {
+      "iteration": 10,
+      "timestamp": "2026-01-29T14:45:28.782708",
+      "params": {
+        "C": 22.0,
+        "gamma": 0.005,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.5,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "Choosing a moderate C to maintain model complexity while leveraging the rbf kernel for potential non-linear relationships. Gamma is set to a moderate value to allow for flexibility, and degree is kept at 3 to balance complexity. Coef0 is set to a middle value to explore interaction terms, and shrinking is enabled for faster convergence."
+      },
+      "score": 0.6944444444444444,
+      "duration": 0.005179882049560547,
+      "reasoning": "Choosing a moderate C to maintain model complexity while leveraging the rbf kernel for potential non-linear relationships. Gamma is set to a moderate value to allow for flexibility, and degree is kept at 3 to balance complexity. Coef0 is set to a middle value to explore interaction terms, and shrinking is enabled for faster convergence."
+    },
+    {
+      "iteration": 11,
+      "timestamp": "2026-01-29T14:45:32.259294",
+      "params": {
+        "C": 28.0,
+        "gamma": 0.01,
+        "kernel": "rbf",
+        "degree": 3,
+        "coef0": 0.5,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "This configuration leverages a moderately high C to maintain model complexity, which is beneficial given the small dataset size. The rbf kernel is retained due to its effectiveness in capturing potential non-linear relationships. Gamma is set to a moderate value to provide flexibility, while degree remains at 3 to balance complexity. Coef0 is kept at 0.5, and shrinking is enabled for faster convergence."
+      },
+      "score": 0.6666666666666666,
+      "duration": 0.0027420520782470703,
+      "reasoning": "This configuration leverages a moderately high C to maintain model complexity, which is beneficial given the small dataset size. The rbf kernel is retained due to its effectiveness in capturing potential non-linear relationships. Gamma is set to a moderate value to provide flexibility, while degree remains at 3 to balance complexity. Coef0 is kept at 0.5, and shrinking is enabled for faster convergence."
+    },
+    {
+      "iteration": 12,
+      "timestamp": "2026-01-29T14:45:35.719136",
+      "params": {
+        "C": 25.0,
+        "gamma": 0.002,
+        "kernel": "poly",
+        "degree": 3,
+        "coef0": 0.6,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to balance complexity and performance by using a moderate C value to control overfitting, while the poly kernel is selected to capture potential non-linear interactions more effectively. A lower gamma is chosen to allow for broader decision boundaries, and degree 3 is set to explore more intricate relationships. Coef0 is slightly adjusted to explore interaction terms, and shrinking is enabled for faster convergence."
+      },
+      "score": 1.0,
+      "duration": 0.07976913452148438,
+      "reasoning": "This configuration aims to balance complexity and performance by using a moderate C value to control overfitting, while the poly kernel is selected to capture potential non-linear interactions more effectively. A lower gamma is chosen to allow for broader decision boundaries, and degree 3 is set to explore more intricate relationships. Coef0 is slightly adjusted to explore interaction terms, and shrinking is enabled for faster convergence."
+    },
+    {
+      "iteration": 13,
+      "timestamp": "2026-01-29T14:45:37.627737",
+      "params": {
+        "C": 20.0,
+        "gamma": 0.002,
+        "kernel": "poly",
+        "degree": 3,
+        "coef0": 0.7,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "This configuration aims to leverage a moderate C value to manage potential overfitting while exploring the poly kernel to capture non-linear relationships. A lower gamma allows for broader decision boundaries, while degree 3 is kept to maintain complexity. Coef0 is increased to explore interaction terms further, and shrinking is enabled for faster convergence."
+      },
+      "score": 1.0,
+      "duration": 0.05943799018859863,
+      "reasoning": "This configuration aims to leverage a moderate C value to manage potential overfitting while exploring the poly kernel to capture non-linear relationships. A lower gamma allows for broader decision boundaries, while degree 3 is kept to maintain complexity. Coef0 is increased to explore interaction terms further, and shrinking is enabled for faster convergence."
+    },
+    {
+      "iteration": 14,
+      "timestamp": "2026-01-29T14:45:41.133683",
+      "params": {
+        "C": 18.0,
+        "gamma": 0.004,
+        "kernel": "poly",
+        "degree": 3,
+        "coef0": 0.8,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "A moderate C value is chosen to manage potential overfitting while still allowing for sufficient model complexity given the small dataset size. The poly kernel is retained to capture non-linear relationships effectively. A slightly increased gamma allows for better decision boundaries while maintaining a degree of 3 to explore complex interactions. Coef0 is set higher to further explore interaction terms, and shrinking is enabled for better convergence speed."
+      },
+      "score": 1.0,
+      "duration": 0.0646369457244873,
+      "reasoning": "A moderate C value is chosen to manage potential overfitting while still allowing for sufficient model complexity given the small dataset size. The poly kernel is retained to capture non-linear relationships effectively. A slightly increased gamma allows for better decision boundaries while maintaining a degree of 3 to explore complex interactions. Coef0 is set higher to further explore interaction terms, and shrinking is enabled for better convergence speed."
+    },
+    {
+      "iteration": 15,
+      "timestamp": "2026-01-29T14:45:43.526578",
+      "params": {
+        "C": 19.0,
+        "gamma": 0.003,
+        "kernel": "poly",
+        "degree": 4,
+        "coef0": 0.9,
+        "shrinking": true,
+        "class_weight": "balanced",
+        "reasoning": "This configuration maintains a moderate C to control overfitting while leveraging the poly kernel to capture potential non-linear relationships more effectively. A slightly higher degree is chosen to explore complex interactions. Gamma is set to a low value to allow broader decision boundaries, while coef0 is increased to further explore interaction terms. Shrinking is enabled for faster convergence."
+      },
+      "score": 1.0,
+      "duration": 0.10317802429199219,
+      "reasoning": "This configuration maintains a moderate C to control overfitting while leveraging the poly kernel to capture potential non-linear relationships more effectively. A slightly higher degree is chosen to explore complex interactions. Gamma is set to a low value to allow broader decision boundaries, while coef0 is increased to further explore interaction terms. Shrinking is enabled for faster convergence."
+    }
+  ]
+}

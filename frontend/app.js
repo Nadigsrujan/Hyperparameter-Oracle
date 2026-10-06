@@ -4,7 +4,7 @@
  */
 
 // API Configuration
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'http://localhost:5001/api';
 
 // Application State
 const state = {
@@ -262,6 +262,9 @@ async function initializeOracle() {
             } else {
                 addLog('  → AI Assistant: DISABLED (using DSA-only mode)');
             }
+
+            // Reset local history tracking
+            state.history = [];
 
             // Start polling for status
             startPolling();
@@ -583,29 +586,45 @@ function displayHyperparameters(config, score) {
 }
 
 function updateCharts(history) {
-    // Update accuracy chart
-    state.charts.accuracy.data.labels = history.map(h => h.iteration);
-    state.charts.accuracy.data.datasets[0].data = history.map(h => h.accuracy);
-    state.charts.accuracy.update('none');
-
-    // Update space chart
-    state.charts.space.data.datasets[0].data = history.map(h => ({
-        x: h.params.C || 0,
-        y: h.params.gamma || 0,
-        acc: h.accuracy
-    }));
-    state.charts.space.update('none');
-
-
-    // Update hyperparameters table
+    // 1. Update hyperparameters table (Priority)
     updateHyperparamsTable(history);
+
+    // 2. Update accuracy chart
+    if (state.charts.accuracy && state.charts.accuracy.data) {
+        state.charts.accuracy.data.labels = history.map(h => h.iteration);
+        state.charts.accuracy.data.datasets[0].data = history.map(h => h.accuracy);
+        state.charts.accuracy.update('none');
+    }
+
+    // 3. Update space chart
+    if (state.charts.space && state.charts.space.data) {
+        state.charts.space.data.datasets[0].data = history.map(h => {
+            // Handle non-numeric gamma (like 'scale' or 'auto') for visualization
+            let yVal = h.params ? h.params.gamma : 0.5;
+            if (typeof yVal !== 'number') {
+                yVal = 0.5; // Fallback for categorical gamma
+            }
+            return {
+                x: h.params ? (h.params.C || 0) : 0,
+                y: yVal,
+                acc: h.accuracy || 0
+            };
+        });
+        state.charts.space.update('none');
+    }
 
     // Add new log entries with more details
     const newEntries = history.slice(state.history.length);
     newEntries.forEach(entry => {
-        const kernelInfo = entry.params.kernel ? `, kernel=${entry.params.kernel}` : '';
+        const kernelInfo = (entry.params && entry.params.kernel) ? `, kernel=${entry.params.kernel}` : '';
         const reasoningInfo = entry.reasoning ? ` [AI: ${entry.reasoning.substring(0, 50)}...]` : '';
-        addLog(`Iter ${entry.iteration}: Acc=${entry.accuracy.toFixed(4)}, C=${entry.params.C?.toFixed(4)}, γ=${entry.params.gamma?.toFixed(4) || entry.params.gamma}${kernelInfo}${reasoningInfo}`);
+
+        // Safe access to params
+        const cVal = entry.params ? (typeof entry.params.C === 'number' ? entry.params.C.toFixed(4) : entry.params.C) : '-';
+        const gammaVal = entry.params ? (typeof entry.params.gamma === 'number' ? entry.params.gamma.toFixed(4) : entry.params.gamma) : '-';
+        const accVal = typeof entry.accuracy === 'number' ? entry.accuracy.toFixed(4) : '-';
+
+        addLog(`Iter ${entry.iteration}: Acc=${accVal}, C=${cVal}, γ=${gammaVal}${kernelInfo}${reasoningInfo}`);
     });
 }
 
@@ -633,10 +652,10 @@ function updateHyperparamsTable(history) {
 
         row.innerHTML = `
             <td class="iteration-col">${entry.iteration}</td>
-            <td class="score-col">${entry.accuracy.toFixed(4)}</td>
-            <td>${entry.params.C?.toFixed(4) || '-'}</td>
+            <td class="score-col">${typeof entry.accuracy === 'number' ? entry.accuracy.toFixed(4) : '-'}</td>
+            <td>${entry.params && typeof entry.params.C === 'number' ? entry.params.C.toFixed(4) : (entry.params?.C || '-')}</td>
             <td>${gammaStr}</td>
-            <td>${entry.params.kernel || '-'}</td>
+            <td>${(entry.params && entry.params.kernel) || '-'}</td>
             <td style="max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${entry.reasoning || 'No AI reasoning'}">${entry.reasoning || '-'}</td>
         `;
 

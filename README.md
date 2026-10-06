@@ -349,7 +349,117 @@ Our system outperforms traditional methods:
 
 ---
 
-## 🚦 Future Enhancements
+---
+
+## 🛠️ Implementation Details
+
+The **Hyperparameter Oracle** is built on a high-performance **hybrid architecture** that bridges low-level algorithmic efficiency with high-level machine learning flexibility. Our implementation treats hyperparameter tuning as a **structured search problem** rather than a black-box optimization.
+
+### 🏗️ Architectural Core: C & Python Synergy
+The system is bifurcated into two specialized layers:
+*   **Performance Engine (C99)**: Handles all recursive and high-frequency data structure operations (Trie traversals, Heap balancing, Graph connectivity) to minimize overhead during the search loop.
+*   **Intelligence Layer (Python 3.8+)**: Manages model state, handles data ingestion via `pandas`, and performs model evaluation using `scikit-learn`. Communication is handled via `ctypes` for near-zero latency.
+
+---
+
+### 📦 Data Structures Module (Detailed)
+
+#### 1. Structural Memory via Trie
+To manage hyperparameter "signatures" and quickly search for similar configurations, we implement a **custom Trie**. This allows us to discretize continuous spaces into a searchable hierarchy.
+```c
+// From src/c/ds_trees.c
+typedef struct TrieNode {
+    struct TrieNode* children[10]; // 10 buckets for discretized values (0.0-1.0)
+    bool is_end;
+} TrieNode;
+
+void insert_trie(double* params, int count) {
+    if (!root) root = create_node();
+    TrieNode* curr = root;
+    for (int i = 0; i < count; i++) {
+        int idx = (int)(params[i] * 10); // Discretize to 10 buckets
+        if (!curr->children[idx]) curr->children[idx] = create_node();
+        curr = curr->children[idx];
+    }
+    curr->is_end = true;
+}
+```
+
+#### 2. Analytical Range Queries via Segment Tree
+We use a **Segment Tree** to track performance history. This allows the Oracle to perform **Range Maximum Queries (RMQ)** in $O(\log n)$, identifying high-performing "eras" of the optimization process to adapt its strategy.
+```c
+// From src/c/ds_trees.c
+double query_segment_tree(int node, int start, int end, int l, int r) {
+    if (r < start || end < l) return -1e9; // Out of range
+    if (l <= start && end <= r) return segment_tree[node];
+    
+    int mid = (start + end) / 2;
+    double p1 = query_segment_tree(2 * node, start, mid, l, r);
+    double p2 = query_segment_tree(2 * node + 1, mid + 1, end, l, r);
+    return (p1 > p2) ? p1 : p2; // Returns the best score in the range [l, r]
+}
+```
+
+#### 3. Proximity Clustering via Union-Find and DAG
+We track the **improvement paths** using a Directed Acyclic Graph (DAG) and group configurations into "performance families" using **Union-Find**.
+*   **DAG**: Stores the evolution of parameters (e.g., Config A $\to$ Config B).
+*   **Union-Find**: Clusters configurations that yield similar accuracy gradients.
+
+---
+
+### 🔍 SearchEngine Module: Multi-Strategy Logic
+The core search loop in `oracle.c` implements a state-managed orchestration of several DSA layers. Instead of random walking, it follows a deterministic yet adaptive priority model:
+
+1.  **Exploitation (Priority Queue)**: Pulls the top configuration from the Max-Heap ($O(1)$ access).
+2.  **Perturbation**: Injects Gaussian noise ($+/- 0.1$) into successful parameters to explore local optima.
+3.  **Frequency Analysis (Count-Min Sketch)**: Avoids regions that frequently yield sub-par results by checking frequency sketches.
+
+```c
+// Internal logic for Smart Suggestion
+int best_id = pq_pop(); // Get best-performing config
+if (best_id != -1) {
+    Config best = config_store[best_id];
+    for (int i = 0; i < count; i++) {
+        // Perturb the best config to find local improvements
+        double noise = ((rand() % 200) - 100) / 1000.0;
+        out_params[i] = best.params[i] + noise;
+    }
+}
+```
+
+---
+
+### 🎓 Training & Evaluation: The Python Bridge
+The Python layer acts as the "Oracle's Hands". It takes the raw parameter vectors from C, translates them into model-specific configurations, and executes the heavy lifting.
+
+```python
+# From src/python/oracle_interface.py
+def get_next_suggestion(self, param_count):
+    arr = (ctypes.c_double * param_count)()
+    # Call the C shared library directly
+    self.lib.get_next_suggestion(arr, param_count)
+    return list(arr)
+```
+
+The `ModelTrainer` then uses these values to fit an SVM:
+```python
+# From src/python/model_trainer.py
+def evaluate(self, params):
+    # Denormalize C-space [0,1] to SVM-space [0.1, 100]
+    c_val = 0.1 + (params[0] * 99.9)
+    gamma_val = 0.001 + (params[1] * 0.999)
+    model = SVC(C=c_val, gamma=gamma_val)
+    ...
+```
+
+### 🛠️ Code Maintainability & Robustness
+*   **Modularity**: Each data structure is implemented in its own C file (`ds_core.c`, `ds_probabilistic.c`, etc.) with a unified interface in `oracle.h`.
+*   **Efficiency**: Custom memory allocators (via static pools) ensure no memory leaks and $O(1)$ allocation time for most structures.
+*   **Extensibility**: Adding a new optimization strategy only requires adding a case to the `get_next_suggestion` function in `oracle.c`.
+
+---
+
+## �🚦 Future Enhancements
 
 - [ ] Multi-objective optimization (accuracy + time + memory)
 - [ ] Reinforcement learning for dynamic priority scoring
@@ -403,3 +513,5 @@ MIT License - feel free to use for academic purposes
 ---
 
 **Ready to revolutionize hyperparameter tuning? Let's go! 🚀**
+
+

@@ -129,7 +129,14 @@ class ModelTrainer:
             # Legacy format: normalized [C, gamma] list
             c_val = 0.1 + (params[0] * 99.9)
             gamma_val = 0.001 + (params[1] * 0.999)
-            svm_params = {'C': c_val, 'gamma': gamma_val}
+            svm_params = {
+                'C': c_val, 
+                'gamma': gamma_val,
+                'kernel': 'rbf',
+                'degree': 3,
+                'coef0': 0.0,
+                'shrinking': True
+            }
             full_params = svm_params.copy()
         
         try:

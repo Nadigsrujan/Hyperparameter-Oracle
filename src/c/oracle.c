@@ -21,6 +21,7 @@ int pq_pop();
 void map_put(int key, double value);
 void lru_access(int config_id);
 void reservoir_add(int config_id);
+void add_edge(int u, int v);
 
 // --- Global State ---
 static Config config_store[1000];
@@ -72,6 +73,7 @@ int register_config(double* params, int count) {
 void update_score(int config_id, double score) {
     if (config_id < 0 || config_id >= config_count) return;
 
+    double old_score = config_store[config_id].score;
     config_store[config_id].score = score;
     
     // Update Structures
@@ -79,8 +81,18 @@ void update_score(int config_id, double score) {
     cms_add(config_store[config_id].params, config_store[config_id].param_count);
     add_history(score);
     
+    // If this is an improvement over previous best in its "cluster"
+    // For simplicity, we compare with the best found so far
+    static int global_best_id = -1;
+    if (global_best_id == -1 || score > config_store[global_best_id].score) {
+        if (global_best_id != -1 && score > config_store[global_best_id].score) {
+            add_edge(global_best_id, config_id); // Track improvement path
+        }
+        global_best_id = config_id;
+    }
+
     // If good score, add to LRU and Priority Queue for local search
-    if (score > 0.7) { // Threshold
+    if (score > 0.5) { // Lower threshold for better exploration
         lru_access(config_id);
         pq_push(config_id, score);
     }
@@ -88,26 +100,45 @@ void update_score(int config_id, double score) {
 
 void get_next_suggestion(double* out_params, int count) {
     // Strategy:
-    // 1. 30% chance: Explore (Random)
-    // 2. 70% chance: Exploit (Perturb best from PQ)
+    // 1. 60% chance: Exploit (Perturb best from PQ or follow DAG path)
+    // 2. 20% chance: Smart Explore (Use CMS popular regions or LRU)
+    // 3. 20% chance: Pure Random
     
-    int best_id = pq_pop();
+    int dice = rand() % 100;
     
-    if (best_id != -1 && (rand() % 100) < 70) {
-        // Exploit: Perturb the best found so far
-        Config best = config_store[best_id];
-        for (int i = 0; i < count; i++) {
-            double noise = ((rand() % 200) - 100) / 1000.0; // +/- 0.1
-            out_params[i] = best.params[i] + noise;
-            if (out_params[i] < 0) out_params[i] = 0;
-            if (out_params[i] > 1) out_params[i] = 1;
+    if (dice < 60) {
+        // Exploit
+        int best_id = pq_pop();
+        if (best_id != -1) {
+            Config best = config_store[best_id];
+            for (int i = 0; i < count; i++) {
+                double noise = ((rand() % 200) - 100) / 1000.0; // +/- 0.1
+                out_params[i] = best.params[i] + noise;
+                if (out_params[i] < 0) out_params[i] = 0;
+                if (out_params[i] > 1) out_params[i] = 1;
+            }
+            pq_push(best_id, best.score); // Keep it in PQ
+            return;
         }
-        // Put it back in PQ for future use
-        pq_push(best_id, best.score); 
-    } else {
-        // Explore: Random
-        for (int i = 0; i < count; i++) {
-            out_params[i] = (rand() % 1000) / 1000.0;
+    } else if (dice < 80) {
+        // Smart Explore using CMS or LRU
+        // For simplicity, pick from LRU if available
+        extern int lru_cache[];
+        extern int lru_count;
+        if (lru_count > 0) {
+            int lucky_id = lru_cache[rand() % lru_count];
+            Config lucky = config_store[lucky_id];
+            for (int i = 0; i < count; i++) {
+                out_params[i] = lucky.params[i] + (((rand() % 400) - 200) / 1000.0); // Wider noise
+                if (out_params[i] < 0) out_params[i] = 0;
+                if (out_params[i] > 1) out_params[i] = 1;
+            }
+            return;
         }
+    }
+    
+    // Default: Random Search
+    for (int i = 0; i < count; i++) {
+        out_params[i] = (rand() % 1000) / 1000.0;
     }
 }

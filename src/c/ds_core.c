@@ -90,8 +90,8 @@ double map_get(int key) {
 // --- LRU Cache ---
 // Stores recently successful Config IDs
 #define LRU_CAPACITY 10
-static int lru_cache[LRU_CAPACITY];
-static int lru_count = 0;
+int lru_cache[LRU_CAPACITY];
+int lru_count = 0;
 
 void lru_access(int config_id) {
     // Check if exists

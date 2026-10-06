@@ -1,0 +1,245 @@
+{
+  "metadata": {
+    "experiment_id": "20251230_200945",
+    "start_time": "2025-12-30T20:09:45.754447",
+    "dataset_info": {
+      "name": "iris",
+      "samples": 150,
+      "features": 4,
+      "classes": 3
+    },
+    "best_config": {
+      "iteration": 2,
+      "params": {
+        "C": 14.5855,
+        "gamma": 0.257743
+      },
+      "score": 1.0
+    },
+    "best_score": 1.0,
+    "end_time": "2025-12-30T20:09:52.881986",
+    "total_configurations": 20
+  },
+  "configurations": [
+    {
+      "iteration": 1,
+      "timestamp": "2025-12-30T20:09:50.742288",
+      "params": {
+        "C": 98.88235423193889,
+        "gamma": 0.7840649985400674
+      },
+      "score": 0.9666666666666667,
+      "duration": 0.008314132690429688,
+      "reasoning": null
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2025-12-30T20:09:50.846025",
+      "params": {
+        "C": 14.5855,
+        "gamma": 0.257743
+      },
+      "score": 1.0,
+      "duration": 0.0019750595092773438,
+      "reasoning": null
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2025-12-30T20:09:50.954546",
+      "params": {
+        "C": 17.5825,
+        "gamma": 0.23077
+      },
+      "score": 1.0,
+      "duration": 0.0034432411193847656,
+      "reasoning": null
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2025-12-30T20:09:51.061481",
+      "params": {
+        "C": 17.1829,
+        "gamma": 0.328672
+      },
+      "score": 1.0,
+      "duration": 0.0017330646514892578,
+      "reasoning": null
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2025-12-30T20:09:51.168230",
+      "params": {
+        "C": 8.6914,
+        "gamma": 0.441559
+      },
+      "score": 1.0,
+      "duration": 0.0015909671783447266,
+      "reasoning": null
+    },
+    {
+      "iteration": 6,
+      "timestamp": "2025-12-30T20:09:51.278193",
+      "params": {
+        "C": 9.890199999999998,
+        "gamma": 0.232768
+      },
+      "score": 1.0,
+      "duration": 0.0035440921783447266,
+      "reasoning": null
+    },
+    {
+      "iteration": 7,
+      "timestamp": "2025-12-30T20:09:51.381920",
+      "params": {
+        "C": 15.3847,
+        "gamma": 0.377623
+      },
+      "score": 1.0,
+      "duration": 0.0015950202941894531,
+      "reasoning": null
+    },
+    {
+      "iteration": 8,
+      "timestamp": "2025-12-30T20:09:51.490185",
+      "params": {
+        "C": 14.185899999999998,
+        "gamma": 0.328672
+      },
+      "score": 1.0,
+      "duration": 0.003014802932739258,
+      "reasoning": null
+    },
+    {
+      "iteration": 9,
+      "timestamp": "2025-12-30T20:09:51.596281",
+      "params": {
+        "C": 21.378700000000002,
+        "gamma": 0.4006
+      },
+      "score": 1.0,
+      "duration": 0.0037686824798583984,
+      "reasoning": null
+    },
+    {
+      "iteration": 10,
+      "timestamp": "2025-12-30T20:09:51.704157",
+      "params": {
+        "C": 15.1849,
+        "gamma": 0.359641
+      },
+      "score": 1.0,
+      "duration": 0.002624988555908203,
+      "reasoning": null
+    },
+    {
+      "iteration": 11,
+      "timestamp": "2025-12-30T20:09:51.812392",
+      "params": {
+        "C": 81.81819999999999,
+        "gamma": 0.6703300000000001
+      },
+      "score": 1.0,
+      "duration": 0.0018002986907958984,
+      "reasoning": null
+    },
+    {
+      "iteration": 12,
+      "timestamp": "2025-12-30T20:09:51.917526",
+      "params": {
+        "C": 9.7903,
+        "gamma": 0.32967099999999994
+      },
+      "score": 1.0,
+      "duration": 0.002007007598876953,
+      "reasoning": null
+    },
+    {
+      "iteration": 13,
+      "timestamp": "2025-12-30T20:09:52.026053",
+      "params": {
+        "C": 74.5255,
+        "gamma": 0.577423
+      },
+      "score": 1.0,
+      "duration": 0.0032677650451660156,
+      "reasoning": null
+    },
+    {
+      "iteration": 14,
+      "timestamp": "2025-12-30T20:09:52.130726",
+      "params": {
+        "C": 4.4956000000000005,
+        "gamma": 0.33866199999999996
+      },
+      "score": 1.0,
+      "duration": 0.0012888908386230469,
+      "reasoning": null
+    },
+    {
+      "iteration": 15,
+      "timestamp": "2025-12-30T20:09:52.237173",
+      "params": {
+        "C": 82.2178,
+        "gamma": 0.5914090000000001
+      },
+      "score": 1.0,
+      "duration": 0.0012879371643066406,
+      "reasoning": null
+    },
+    {
+      "iteration": 16,
+      "timestamp": "2025-12-30T20:09:52.346409",
+      "params": {
+        "C": 51.948100000000004,
+        "gamma": 0.261739
+      },
+      "score": 1.0,
+      "duration": 0.003203868865966797,
+      "reasoning": null
+    },
+    {
+      "iteration": 17,
+      "timestamp": "2025-12-30T20:09:52.453419",
+      "params": {
+        "C": 91.60839999999999,
+        "gamma": 0.4975030000000001
+      },
+      "score": 1.0,
+      "duration": 0.00308990478515625,
+      "reasoning": null
+    },
+    {
+      "iteration": 18,
+      "timestamp": "2025-12-30T20:09:52.562437",
+      "params": {
+        "C": 56.04400000000001,
+        "gamma": 0.25274800000000003
+      },
+      "score": 1.0,
+      "duration": 0.0036611557006835938,
+      "reasoning": null
+    },
+    {
+      "iteration": 19,
+      "timestamp": "2025-12-30T20:09:52.669740",
+      "params": {
+        "C": 93.30669999999999,
+        "gamma": 0.4735270000000001
+      },
+      "score": 1.0,
+      "duration": 0.0036170482635498047,
+      "reasoning": null
+    },
+    {
+      "iteration": 20,
+      "timestamp": "2025-12-30T20:09:52.776186",
+      "params": {
+        "C": 10.9891,
+        "gamma": 0.6923079999999999
+      },
+      "score": 1.0,
+      "duration": 0.002588033676147461,
+      "reasoning": null
+    }
+  ]
+}
