@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperparameter Oracle - DSA-Driven AutoML</title>
+    <meta name="description"
+        content="A Data-Structure-Driven Framework for Intelligent and Explainable Hyperparameter Optimization">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">🧠</div>
+                    <div class="logo-text">
+                        <h1>Hyperparameter Oracle</h1>
+                        <p>DSA-Driven AutoML Framework</p>
+                    </div>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-card">
+                        <span class="stat-label">Unique Configs</span>
+                        <span class="stat-value" id="unique-configs">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Best Accuracy</span>
+                        <span class="stat-value" id="best-accuracy">0.0000</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Iteration</span>
+                        <span class="stat-value"><span id="current-iteration">0</span>/<span
+                                id="max-iterations">0</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Control Panel -->
+            <section class="control-panel">
+                <h2>Control Panel</h2>
+                <div class="control-grid">
+                    <div class="control-group">
+                        <label for="dataset-select">Dataset Source</label>
+                        <select id="dataset-select" class="input-field">
+                            <option value="custom">📁 Upload Your Own Dataset (CSV)</option>
+                            <option value="iris">Iris (150 samples, 4 features)</option>
+                            <option value="wine">Wine (178 samples, 13 features)</option>
+                            <option value="digits">Digits (1797 samples, 64 features)</option>
+                        </select>
+                    </div>
+                    <div class="control-group" id="custom-upload-group" style="display: block;">
+                        <label for="dataset-file">Upload CSV File</label>
+                        <input type="file" id="dataset-file" class="input-field file-input" accept=".csv">
+                        <small class="file-help">CSV format: features in columns, last column = target class</small>
+                    </div>
+                    <div class="control-group">
+                        <label for="iterations-input">Max Iterations</label>
+                        <input type="number" id="iterations-input" class="input-field" value="50" min="10" max="200">
+                    </div>
+                    <div class="control-actions">
+                        <button id="initialize-btn" class="btn btn-primary">Initialize Oracle</button>
+                        <button id="start-btn" class="btn btn-success" disabled>Start Optimization</button>
+                        <button id="stop-btn" class="btn btn-danger" disabled>Stop</button>
+                        <button id="compare-btn" class="btn btn-secondary" disabled>Run Comparison</button>
+                    </div>
+                </div>
+                <div class="status-bar">
+                    <div class="status-indicator" id="status-indicator">
+                        <span class="status-dot"></span>
+                        <span id="status-text">Not Initialized</span>
+                    </div>
+                    <div class="progress-bar" id="progress-bar">
+                        <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Visualization Grid -->
+            <section class="visualization-section">
+                <h2>Real-Time Visualization</h2>
+                <div class="viz-grid">
+                    <!-- Accuracy Over Time -->
+                    <div class="viz-card">
+                        <div class="viz-header">
+                            <h3>Accuracy Convergence</h3>
+                            <span class="viz-badge">Live</span>
+                        </div>
+                        <canvas id="accuracy-chart"></canvas>
+                    </div>
+
+                    <!-- Hyperparameter Space -->
+                    <div class="viz-card">
+                        <div class="viz-header">
+                            <h3>Hyperparameter Space Exploration</h3>
+                            <span class="viz-badge">2D View</span>
+                        </div>
+                        <canvas id="space-chart"></canvas>
+                    </div>
+
+
+                    <!-- Best Configuration -->
+                    <div class="viz-card">
+                        <div class="viz-header">
+                            <h3>Best Configuration</h3>
+                            <span class="viz-badge">Optimal</span>
+                        </div>
+                        <div class="config-display" id="best-config">
+                            <div class="config-placeholder">
+                                <p>Run optimization to see best configuration...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hyperparameters History Section -->
+            <section class="hyperparams-section">
+                <h2>All Hyperparameters Tested</h2>
+                <div class="viz-card">
+                    <div class="viz-header">
+                        <h3>Complete Configuration History</h3>
+                        <span class="viz-badge">Live Data</span>
+                    </div>
+                    <div style="overflow-x: auto; max-height: 400px; overflow-y: auto;">
+                        <table class="hyperparams-table" id="hyperparams-table">
+                            <thead>
+                                <tr>
+                                    <th>Iter</th>
+                                    <th>Accuracy</th>
+                                    <th>Model</th>
+                                    <th>LR / Trees</th>
+                                    <th>Batch / Depth</th>
+                                    <th>Layers / Split</th>
+                                    <th>AI Reasoning</th>
+                                </tr>
+                            </thead>
+                            <tbody id="hyperparams-tbody">
+                                <tr>
+                                    <td colspan="6"
+                                        style="text-align: center; padding: 2rem; color: var(--text-muted); font-style: italic;">
+                                        No hyperparameter data yet. Start optimization to see results...
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comparison Section -->
+            <section class="comparison-section" id="comparison-section">
+                <h2>Oracle Comparison</h2>
+                <div class="comparison-grid">
+                    <div class="viz-card">
+                        <div class="viz-header">
+                            <h3>Convergence Comparison</h3>
+                            <span class="viz-badge">Benchmark</span>
+                        </div>
+                        <canvas id="comparison-chart"></canvas>
+                    </div>
+                    <div class="viz-card">
+                        <div class="viz-header">
+                            <h3>Performance Summary</h3>
+                            <span class="viz-badge">Results</span>
+                        </div>
+                        <div class="comparison-table" id="comparison-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Method</th>
+                                        <th>Final Test Accuracy</th>
+                                        <th>Time (s)</th>
+                                        <th>Efficiency Score</th>
+                                        <th>Relative Efficiency</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="comparison-tbody">
+                                    <tr>
+                                        <td colspan="5" class="loading">Run comparison to see results...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="formula-note"
+                            style="margin-top: 15px; padding: 10px; border-radius: 8px; background: rgba(148, 163, 184, 0.05); font-size: 0.85em; color: #94a3b8; border: 1px dashed rgba(148, 163, 184, 0.2);">
+                            <p style="margin-bottom: 5px;"><strong>📊 Metrics Definition:</strong></p>
+                            <p>• <strong>Efficiency Score</strong> = Final Test Accuracy / Total Optimization Time</p>
+                            <p>• <strong>Relative Efficiency</strong> = Efficiency Score / Grid Search Efficiency
+                                (Baseline = 1.0)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experiment Log -->
+            <section class="log-section">
+                <h2>Experiment Log</h2>
+                <div class="log-container" id="log-container">
+                    <div class="log-entry">
+                        <span class="log-time">--:--:--</span>
+                        <span class="log-message">System ready. Initialize to begin.</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Hyperparameter Oracle - A DSA-Driven Framework for Intelligent Hyperparameter Optimization</p>
+            <p>Built with ❤️ using C (DSA Core) + Python (ML Layer) + Modern Web Technologies</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
